@@ -3,5 +3,8 @@
   "devDependencies": {
     "@chainlink/contracts": "^0.6.1",
     "@chainlink/contracts-ccip": "^0.7.3"
+  },
+  "dependencies": {
+    "@uniswap/v3-periphery": "^1.4.4"
   }
 }

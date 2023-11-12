@@ -5,7 +5,10 @@ import "forge-std/Script.sol";
 import "./Helper.sol";
 import {ProgrammableTokenTransfers} from "../src/ProgrammableTokenTransfers.sol";
 
+
+// forge script script/TokenAndDataTransfer.s.sol:DeployProgrammableTokenTransfers --rpc-url $POLYGON_MUMBAI_RPC_URL  --chain-id 80001 --private-key $PRIVATE_KEY --broadcast  --etherscan-api-key TF9Y7A6VEMCHD2X4WYXTFYPF5TU77RGPT7 
 contract DeployProgrammableTokenTransfers is Script, Helper {
+
     function run(SupportedNetworks network) external {
         uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
         vm.startBroadcast(deployerPrivateKey);

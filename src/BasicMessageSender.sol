@@ -5,13 +5,13 @@ import {LinkTokenInterface} from "@chainlink/contracts/src/v0.8/interfaces/LinkT
 import {IRouterClient} from "@chainlink/contracts-ccip/src/v0.8/ccip/interfaces/IRouterClient.sol";
 import {Client} from "@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol";
 import {Withdraw} from "./utils/Withdraw.sol";
-
+import {IBasicMessageSender} from "./IBasicMessageSender.sol";
 /**
  * THIS IS AN EXAMPLE CONTRACT THAT USES HARDCODED VALUES FOR CLARITY.
  * THIS IS AN EXAMPLE CONTRACT THAT USES UN-AUDITED CODE.
  * DO NOT USE THIS CODE IN PRODUCTION.
  */
-contract BasicMessageSender is Withdraw {
+contract BasicMessageSender is Withdraw,IBasicMessageSender {
     enum PayFeesIn {
         Native,
         LINK
@@ -19,9 +19,9 @@ contract BasicMessageSender is Withdraw {
 
     address immutable i_router;
     address immutable i_link;
-
+    event Debug(string str);
     event MessageSent(bytes32 messageId);
-
+    
     constructor(address router, address link) {
         i_router = router;
         i_link = link;
@@ -34,8 +34,9 @@ contract BasicMessageSender is Withdraw {
         uint64 destinationChainSelector,
         address receiver,
         string memory messageText,
-        PayFeesIn payFeesIn
-    ) external returns (bytes32 messageId) {
+        bool useLink
+    ) external override returns (bytes32 messageId)  {
+        PayFeesIn payFeesIn = useLink? PayFeesIn.LINK:PayFeesIn.Native;
         Client.EVM2AnyMessage memory message = Client.EVM2AnyMessage({
             receiver: abi.encode(receiver),
             data: abi.encode(messageText),
