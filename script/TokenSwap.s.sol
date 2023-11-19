@@ -8,7 +8,7 @@ import {BasicMessageSender} from "../src/BasicMessageSender.sol";
 import {IBasicMessageSender} from "../src/IBasicMessageSender.sol";
 import '@uniswap/v3-periphery/contracts/interfaces/ISwapRouter.sol';
 import {Client} from "@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol";
-
+import {LinkTokenInterface} from "@chainlink/contracts/src/v0.8/interfaces/LinkTokenInterface.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 // forge script script/TokenSwap.s.sol:DeployUniswapMessager --rpc-url $POLYGON_MUMBAI_RPC_URL  --chain-id 80001 --private-key $PRIVATE_KEY --broadcast  --etherscan-api-key TF9Y7A6VEMCHD2X4WYXTFYPF5TU77RGPT7 
@@ -83,9 +83,6 @@ contract DeploySender is Script, Helper{
             "with address: ",
             address(sender)
         );
-
-        
-
         vm.stopBroadcast();
     }
 }

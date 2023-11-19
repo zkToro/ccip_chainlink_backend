@@ -22,7 +22,7 @@ abstract contract Util {
 
         return result;
     }
-    
+
     function addUint256ToInt256(int256 a, uint256 b) public pure returns (int256) {
         require(b <= uint256(type(int256).max), "Conversion overflow");
 
@@ -38,20 +38,15 @@ abstract contract Util {
 
         return a + convertedB;
     }
-    function subtractUint256FromInt256(int256 a, uint256 b) public pure returns (int256) {
-        require(b <= uint256(type(int256).max), "Conversion overflow");
+    function subtract(uint256 a, int256 b) public pure returns (int256) {
+        require(a <= uint256(type(int256).max), "Value too large for int256");
 
-        int256 convertedB = int256(b);
+        int256 convertedA = int256(a);
+        
+        // Check for underflow
+        require(b - convertedA <= b, "Underflow occurred");
 
-        if (a >= 0) {
-            // Check for underflow
-            require(a >= convertedB, "Subtraction underflow");
-        } else {
-            // Check for overflow
-            require(type(int256).min - a <= convertedB, "Subtraction overflow");
-        }
-
-        return a - convertedB;
+        return b - convertedA;
     }
     function safeAddIntToUint(int256 a, uint256 b) public pure returns (uint256) {
         if (a < 0) {
@@ -72,5 +67,12 @@ abstract contract Util {
         }
 
         return string(hexString);
+    }
+    
+    function subtractUintFromInt(int256 a, uint256 b) public pure returns (uint256) {
+        require(a >= int256(b), "Subtraction would result in a negative number");
+    
+        // Perform the subtraction and convert the result to uint256
+        return uint256(a - int256(b));
     }
 }
