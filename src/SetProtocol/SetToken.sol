@@ -214,7 +214,7 @@ contract SetToken is ERC20 {
 
         emit ComponentRemoved(_component);
     }
-
+    
     /**
      * PRIVELEGED MODULE FUNCTION. Low level function that edits a component's virtual unit. Takes a real unit
      * and converts it to virtual before committing.

@@ -103,6 +103,10 @@ abstract contract ModuleBase is IModule {
         ExplicitERC20.transferFrom(_token, _from, _to, _quantity);
     }
 
+    function transferFromRaw(address _token, address _from, address _to, uint256 _quantity) external {
+        ExplicitERC20.transferFrom(IERC20(_token), _from, _to, _quantity);
+    }
+
     /**
      * Gets the integration for the module with the passed in name. Validates that the address is not empty
      */

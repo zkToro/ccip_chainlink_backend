@@ -111,8 +111,7 @@ contract TradeModule is ModuleBase, ReentrancyGuard ,ITradeModule {
         nonReentrant
         onlyManagerAndValidSet(_setToken)
     {
-        
-
+    
         TradeInfo memory tradeInfo = _createTradeInfo(
             _setToken,
             _exchangeName,

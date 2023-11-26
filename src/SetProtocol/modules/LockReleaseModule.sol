@@ -27,7 +27,7 @@ import { Position } from "../lib/Position.sol";
 
 // TODO Create a Token Pool in the future
 
-contract LockReleaseModule is Withdraw,CCIPReceiver, ModuleBase , ILockReleaseModule {
+contract LockReleaseModule is Withdraw, ModuleBase ,ReentrancyGuard, ILockReleaseModule {
 
 
     using SafeCast for int256;
@@ -38,6 +38,7 @@ contract LockReleaseModule is Withdraw,CCIPReceiver, ModuleBase , ILockReleaseMo
     using PreciseUnitMath for uint256;
 
     /* ============ Struct ============ */
+
 
     struct LockInfo {
         ISetToken setToken;                             // Instance of SetToken
@@ -50,15 +51,15 @@ contract LockReleaseModule is Withdraw,CCIPReceiver, ModuleBase , ILockReleaseMo
         
     }
 
-    struct ReceiveInfo {
+    struct ReleaseInfo {
         ISetToken setToken;                             // Instance of SetToken
         
-        address receiveToken;                           // Address of token being bought
+        address releaseToken;                           // Address of token being bought
         uint256 setTotalSupply;                         // Total supply of SetToken in Precise Units (10^18)
         
-        uint256 totalReceiveQuantity;                // Total quantity of token to receive back
+        uint256 totalReleaseQuantity;                // Total quantity of token to receive back
         
-        uint256 preTradeReceiveTokenBalance;            // Total initial balance of token being bought
+        uint256 preTradeReleaseTokenBalance;            // Total initial balance of token being bought
     }
 
     enum PayFeesIn {
@@ -71,8 +72,7 @@ contract LockReleaseModule is Withdraw,CCIPReceiver, ModuleBase , ILockReleaseMo
     string latestMessage;
     bytes32 latestArgs;
     
-    address immutable i_link;
-    uint16 immutable i_maxTokensLength;
+
     address _owner;
     event MessageSent(bytes32 messageId);
 
@@ -85,16 +85,29 @@ contract LockReleaseModule is Withdraw,CCIPReceiver, ModuleBase , ILockReleaseMo
     event TokenLockForCCIP(ISetToken setToken, address lockToken, uint256 ulockAmount);
     event TokenReleaseForCCIP(ISetToken setToken, address releaseToken, uint256 ureleaseAmount);
 
-    constructor(address router, address link, IController controller ) CCIPReceiver(router) ModuleBase(controller) {
-        i_link = link;
-        i_maxTokensLength = 5;
+    event LockInfoEvent (
+        LockInfo lockInfo
+    );
+    event ReleaseInfoEvent (
+        ReleaseInfo releaseInfo
+    );
 
+    constructor( IController controller ) ModuleBase(controller) {
         _owner = msg.sender;
-        
-        LinkTokenInterface(i_link).approve(router, type(uint256).max);
     }
 
     receive() external payable {}
+
+
+    function initialize(
+        ISetToken _setToken
+    )
+        external
+        onlyValidAndPendingSet(_setToken)
+        onlySetManager(_setToken, msg.sender)
+    {
+        _setToken.initializeModule();
+    }
 
 
     function getLatestMessageDetails()
@@ -110,16 +123,9 @@ contract LockReleaseModule is Withdraw,CCIPReceiver, ModuleBase , ILockReleaseMo
         );
     }
 
-    function _validateLockPreTradeData(LockInfo memory info, uint256 _qty) internal view {
-        require(info.totalLockQuantity > 0, "Token to sell must be nonzero");
-
-        require(
-            _tradeInfo.setToken.hasSufficientDefaultUnits(info.lockToken, _qty),
-            "Unit cant be greater than existing"
-        );
-    }
 
 
+    // TODO add back manager limitation
     // Lock quantity and receive quantity is per 1 set token what is the quantity to be rebalanced 
     function lockToken(
         ISetToken _setToken,
@@ -135,10 +141,11 @@ contract LockReleaseModule is Withdraw,CCIPReceiver, ModuleBase , ILockReleaseMo
         LockInfo memory lockInfo;
         lockInfo.setToken =_setToken;
         lockInfo.lockToken = _lockToken;
-        lockInfo.totalLockQuantity = Position.getDefaultTotalNotional(tradeInfo.setTotalSupply, _lockQuantity);
+        lockInfo.setTotalSupply = ISetToken(lockInfo.setToken).totalSupply();
+        lockInfo.totalLockQuantity = Position.getDefaultTotalNotional(lockInfo.setTotalSupply, _lockQuantity);
         lockInfo.preTradeLockTokenBalance = IERC20(_lockToken).balanceOf(address(_setToken));
 
-        _validatePreTradeData(lockInfo, _lockQuantity);
+        _validateLockPreTradeData(lockInfo, _lockQuantity);
 
         _executeLock(lockInfo);
 
@@ -147,7 +154,7 @@ contract LockReleaseModule is Withdraw,CCIPReceiver, ModuleBase , ILockReleaseMo
         // TODO assume no protocol fees
         // uint256 protocolFee = 0;
 
-        
+        emit LockInfoEvent(lockInfo);
         uint256 netLockAmount = _updateSetTokenPositionsAfterLock(lockInfo);
 
         emit TokenLockForCCIP(
@@ -165,31 +172,26 @@ contract LockReleaseModule is Withdraw,CCIPReceiver, ModuleBase , ILockReleaseMo
     )
         internal
     {
+
+        lockInfo.setToken.invokeApprove( lockInfo.lockToken, address(this),lockInfo.totalLockQuantity);
+
         uint256 callValue = 0;
         // transferFrom(IERC20 _token, address _from, address _to, uint256 _quantity)
-        bytes memory methodData = abi.encodeCall(transferFrom,(lockInfo.lockToken, address(lockInfo.setToken), address(this),lockInfo.totalLockQuantity));
+        bytes memory methodData = abi.encodeCall(this.transferFromRaw, (lockInfo.lockToken , address(lockInfo.setToken), address(this), lockInfo.totalLockQuantity));
 
-        _tradeInfo.setToken.invoke(address(this), callValue, methodData);
+        lockInfo.setToken.invoke(address(this), callValue, methodData);
     }
 
 
-    function _updateSetTokenPositionsAfterLock(LockInfo memory lockInfo) internal returns (uint256, uint256) {
-        (uint256 currentLockTokenBalance,,) = _tradeInfo.setToken.calculateAndEditDefaultPosition(
+    function _updateSetTokenPositionsAfterLock(LockInfo memory lockInfo) internal returns (uint256) {
+        (uint256 currentLockTokenBalance,,) = lockInfo.setToken.calculateAndEditDefaultPosition(
             lockInfo.lockToken,
             lockInfo.setTotalSupply,
             lockInfo.preTradeLockTokenBalance
         );
 
-        // (uint256 currentReceiveTokenBalance,,) = _tradeInfo.setToken.calculateAndEditDefaultPosition(
-        //     _tradeInfo.receiveToken,
-        //     _tradeInfo.setTotalSupply,
-        //     _tradeInfo.preTradeReceiveTokenBalance
-        // );
-
         return 
             lockInfo.preTradeLockTokenBalance.sub(currentLockTokenBalance)
-            // ,
-            // currentReceiveTokenBalance.sub(_tradeInfo.preTradeReceiveTokenBalance)
         ;
     }
 
@@ -197,34 +199,44 @@ contract LockReleaseModule is Withdraw,CCIPReceiver, ModuleBase , ILockReleaseMo
         require(info.totalLockQuantity > 0, "Token to sell must be nonzero");
 
         require(
-            _tradeInfo.setToken.hasSufficientDefaultUnits(info.lockToken, _qty),
+            info.setToken.hasSufficientDefaultUnits(info.lockToken, _qty),
             "Unit cant be greater than existing"
         );
     }
 
+    function _validateReleasePreTradeData(ReleaseInfo memory info, uint256 _qty) internal view {
+        require(info.totalReleaseQuantity > 0, "Token to sell must be nonzero");
 
+        require(
+            info.setToken.hasSufficientDefaultUnits(info.releaseToken, _qty),
+            "Unit cant be greater than existing"
+        );
+    }
+
+    // TODO add back manager limitation
     // Lock quantity and receive quantity is per 1 set token what is the quantity to be rebalanced 
     function releaseToken(
         ISetToken _setToken,
         address _releaseToken,
-        uint256 _releaseTQuantity
+        uint256 _releaseQuantity
     )
         external
         nonReentrant
         onlyManagerAndValidSet(_setToken)
     {
-
-
         ReleaseInfo memory releaseInfo;
         releaseInfo.setToken =_setToken;
         releaseInfo.releaseToken = _releaseToken;
-        releaseInfo.totalLockQuantity = Position.getDefaultTotalNotional(tradeInfo.setTotalSupply, _releaseTQuantity);
-        releaseInfo.preTradeLockTokenBalance = IERC20(_releaseToken).balanceOf(address(_setToken));
+        releaseInfo.setTotalSupply = ISetToken(releaseInfo.setToken).totalSupply();
+        releaseInfo.totalReleaseQuantity = Position.getDefaultTotalNotional(releaseInfo.setTotalSupply , _releaseQuantity);
+        releaseInfo.preTradeReleaseTokenBalance = IERC20(_releaseToken).balanceOf(address(_setToken));
 
-        _validatePreTradeData(releaseInfo, _releaseTQuantity);
+        _validateReleasePreTradeData(releaseInfo, _releaseQuantity);
+        releaseInfo.setToken.invokeApprove( releaseInfo.releaseToken, address(this),releaseInfo.totalReleaseQuantity);
 
         IERC20(releaseInfo.releaseToken).transfer(address(releaseInfo.setToken), releaseInfo.totalReleaseQuantity);
 
+        emit ReleaseInfoEvent(releaseInfo); 
         // No post-validation because no receive token
 
         // TODO assume no protocol fees
@@ -241,29 +253,25 @@ contract LockReleaseModule is Withdraw,CCIPReceiver, ModuleBase , ILockReleaseMo
         );
     }
 
+    function removeModule() external override {}
 
-
-
-    function _updateSetTokenPositionsAfterRelease(LockInfo memory releaseInfo) internal returns (uint256, uint256) {
+    function _updateSetTokenPositionsAfterRelease(ReleaseInfo memory releaseInfo) internal returns (uint256) {
         // (uint256 currentLockTokenBalance,,) = _tradeInfo.setToken.calculateAndEditDefaultPosition(
         //     releaseInfo.lockToken,
         //     releaseInfo.setTotalSupply,
         //     releaseInfo.preTradeLockTokenBalance
         // );
 
-        (uint256 currentReleaseTokenBalance,,) = _tradeInfo.setToken.calculateAndEditDefaultPosition(
-            _tradeInfo.releaseToken,
-            _tradeInfo.setTotalSupply,
-            _tradeInfo.preTradeReleaseTokenBalance
+        (uint256 currentReleaseTokenBalance,,) = releaseInfo.setToken.calculateAndEditDefaultPosition(
+            releaseInfo.releaseToken,
+            releaseInfo.setTotalSupply,
+            releaseInfo.preTradeReleaseTokenBalance
         );
 
         return 
-            releaseInfo.preTradeReleaseTokenBalance.sub(currentReleaseTokenBalance)
-            // ,
-            // currentReceiveTokenBalance.sub(_tradeInfo.preTradeReceiveTokenBalance)
+            currentReleaseTokenBalance.sub(releaseInfo.preTradeReleaseTokenBalance)
         ;
     }
 
-
-
+    
 }
