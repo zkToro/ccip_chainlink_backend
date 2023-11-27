@@ -1,0 +1,183 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "removeModule",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "removeModule()": "847ef08d"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"removeModule\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Set Protocol Interface for interacting with Modules.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"IModule\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"removeModule()\":{\"notice\":\"Called by a SetToken to notify that this module was removed from the Set token. Any logic can be included in case checks need to be made or state needs to be cleared.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/SetProtocol/interfaces/IModule.sol\":\"IModule\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"src/SetProtocol/interfaces/IModule.sol\":{\"keccak256\":\"0x09c05251493cdd24298f09fdeabeb7ad012841091f24b38ea39e979262bec96b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://7b5e5fe584182d2fc31bc49a8db1161a9531e8acc6cb67ba61ef783a8ac173b8\",\"dweb:/ipfs/QmaDdVdTUbjekf6E18FVouvwR5nmzLspvUzUQtajUBrwi2\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "removeModule"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "removeModule()": {
+            "notice": "Called by a SetToken to notify that this module was removed from the Set token. Any logic can be included in case checks need to be made or state needs to be cleared."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/",
+        "@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/",
+        "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+        "@eth-optimism/=node_modules/@eth-optimism/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/",
+        "chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/SetProtocol/interfaces/IModule.sol": "IModule"
+      },
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "src/SetProtocol/interfaces/IModule.sol": {
+        "keccak256": "0x09c05251493cdd24298f09fdeabeb7ad012841091f24b38ea39e979262bec96b",
+        "urls": [
+          "bzz-raw://7b5e5fe584182d2fc31bc49a8db1161a9531e8acc6cb67ba61ef783a8ac173b8",
+          "dweb:/ipfs/QmaDdVdTUbjekf6E18FVouvwR5nmzLspvUzUQtajUBrwi2"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/SetProtocol/interfaces/IModule.sol",
+    "id": 44305,
+    "exportedSymbols": {
+      "IModule": [
+        44304
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:378:81",
+    "nodes": [
+      {
+        "id": 44298,
+        "nodeType": "PragmaDirective",
+        "src": "33:23:81",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 44304,
+        "nodeType": "ContractDefinition",
+        "src": "155:256:81",
+        "nodes": [
+          {
+            "id": 44303,
+            "nodeType": "FunctionDefinition",
+            "src": "376:33:81",
+            "nodes": [],
+            "documentation": {
+              "id": 44300,
+              "nodeType": "StructuredDocumentation",
+              "src": "179:192:81",
+              "text": " Called by a SetToken to notify that this module was removed from the Set token. Any logic can be included\n in case checks need to be made or state needs to be cleared."
+            },
+            "functionSelector": "847ef08d",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removeModule",
+            "nameLocation": "385:12:81",
+            "parameters": {
+              "id": 44301,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "397:2:81"
+            },
+            "returnParameters": {
+              "id": 44302,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "408:0:81"
+            },
+            "scope": 44304,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IModule",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 44299,
+          "nodeType": "StructuredDocumentation",
+          "src": "59:95:81",
+          "text": " @title IModule\n @author Set Protocol\n Interface for interacting with Modules."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          44304
+        ],
+        "name": "IModule",
+        "nameLocation": "165:7:81",
+        "scope": 44305,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 81
+}

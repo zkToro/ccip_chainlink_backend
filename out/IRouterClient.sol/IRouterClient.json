@@ -1,0 +1,1107 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "InsufficientFeeTokenAmount",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidMsgValue",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "destChainSelector",
+          "type": "uint64"
+        }
+      ],
+      "name": "UnsupportedDestinationChain",
+      "type": "error"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "destinationChainSelector",
+          "type": "uint64"
+        },
+        {
+          "components": [
+            {
+              "internalType": "bytes",
+              "name": "receiver",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct Client.EVMTokenAmount[]",
+              "name": "tokenAmounts",
+              "type": "tuple[]"
+            },
+            {
+              "internalType": "address",
+              "name": "feeToken",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraArgs",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct Client.EVM2AnyMessage",
+          "name": "message",
+          "type": "tuple"
+        }
+      ],
+      "name": "ccipSend",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "destinationChainSelector",
+          "type": "uint64"
+        },
+        {
+          "components": [
+            {
+              "internalType": "bytes",
+              "name": "receiver",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "amount",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct Client.EVMTokenAmount[]",
+              "name": "tokenAmounts",
+              "type": "tuple[]"
+            },
+            {
+              "internalType": "address",
+              "name": "feeToken",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "extraArgs",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct Client.EVM2AnyMessage",
+          "name": "message",
+          "type": "tuple"
+        }
+      ],
+      "name": "getFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "fee",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "chainSelector",
+          "type": "uint64"
+        }
+      ],
+      "name": "getSupportedTokens",
+      "outputs": [
+        {
+          "internalType": "address[]",
+          "name": "tokens",
+          "type": "address[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "chainSelector",
+          "type": "uint64"
+        }
+      ],
+      "name": "isChainSupported",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "supported",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "ccipSend(uint64,(bytes,bytes,(address,uint256)[],address,bytes))": "96f4e9f9",
+    "getFee(uint64,(bytes,bytes,(address,uint256)[],address,bytes))": "20487ded",
+    "getSupportedTokens(uint64)": "fbca3b74",
+    "isChainSupported(uint64)": "a48a9058"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"InsufficientFeeTokenAmount\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidMsgValue\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"destChainSelector\",\"type\":\"uint64\"}],\"name\":\"UnsupportedDestinationChain\",\"type\":\"error\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"destinationChainSelector\",\"type\":\"uint64\"},{\"components\":[{\"internalType\":\"bytes\",\"name\":\"receiver\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"internalType\":\"struct Client.EVMTokenAmount[]\",\"name\":\"tokenAmounts\",\"type\":\"tuple[]\"},{\"internalType\":\"address\",\"name\":\"feeToken\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"extraArgs\",\"type\":\"bytes\"}],\"internalType\":\"struct Client.EVM2AnyMessage\",\"name\":\"message\",\"type\":\"tuple\"}],\"name\":\"ccipSend\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"destinationChainSelector\",\"type\":\"uint64\"},{\"components\":[{\"internalType\":\"bytes\",\"name\":\"receiver\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"internalType\":\"struct Client.EVMTokenAmount[]\",\"name\":\"tokenAmounts\",\"type\":\"tuple[]\"},{\"internalType\":\"address\",\"name\":\"feeToken\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"extraArgs\",\"type\":\"bytes\"}],\"internalType\":\"struct Client.EVM2AnyMessage\",\"name\":\"message\",\"type\":\"tuple\"}],\"name\":\"getFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"fee\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"chainSelector\",\"type\":\"uint64\"}],\"name\":\"getSupportedTokens\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"tokens\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"chainSelector\",\"type\":\"uint64\"}],\"name\":\"isChainSupported\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"supported\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"ccipSend(uint64,(bytes,bytes,(address,uint256)[],address,bytes))\":{\"details\":\"Note if msg.value is larger than the required fee (from getFee) we accept the overpayment with no refund.\",\"params\":{\"destinationChainSelector\":\"The destination chain ID\",\"message\":\"The cross-chain CCIP message including data and/or tokens\"},\"returns\":{\"_0\":\"messageId The message ID\"}},\"getFee(uint64,(bytes,bytes,(address,uint256)[],address,bytes))\":{\"details\":\"returns 0 fee on invalid message.\",\"params\":{\"destinationChainSelector\":\"The destination chainSelector\",\"message\":\"The cross-chain CCIP message including data and/or tokens\"},\"returns\":{\"fee\":\"returns guaranteed execution fee for the specified message delivery to destination chain\"}},\"getSupportedTokens(uint64)\":{\"params\":{\"chainSelector\":\"The chainSelector.\"},\"returns\":{\"tokens\":\"The addresses of all tokens that are supported.\"}},\"isChainSupported(uint64)\":{\"params\":{\"chainSelector\":\"The chain to check.\"},\"returns\":{\"supported\":\"is true if it is supported, false if not.\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"ccipSend(uint64,(bytes,bytes,(address,uint256)[],address,bytes))\":{\"notice\":\"Request a message to be sent to the destination chain\"},\"getSupportedTokens(uint64)\":{\"notice\":\"Gets a list of all supported tokens which can be sent or received to/from a given chain id.\"},\"isChainSupported(uint64)\":{\"notice\":\"Checks if the given chain ID is supported for sending/receiving.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/interfaces/IRouterClient.sol\":\"IRouterClient\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/interfaces/IRouterClient.sol\":{\"keccak256\":\"0xbf5471e441597fcf9a04280d222474b18f87fea901116dd3c4c20823009332fc\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://93514ee7e3ba94ba5fbb6904045ad1fe6bdc85e53cd45dd888b9756dbf7a0e7b\",\"dweb:/ipfs/QmcitG6SVwvNCvgvzpye1yX4HFR33urJFCDTwX4d1rUepu\"]},\"node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol\":{\"keccak256\":\"0x1155a7a1111159f6f90c1eff989301d99ae80f52cbfcdbebbc941d4e78e6ea0e\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://f880a135abf5eb44da2db12ef91621c662b674edda93256977cb2740f728e39f\",\"dweb:/ipfs/QmdKehLeE9Af2Lt92DGXsb1YHiQu9tcQRQQKaAQQZeyQfb\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "InsufficientFeeTokenAmount"
+        },
+        {
+          "inputs": [],
+          "type": "error",
+          "name": "InvalidMsgValue"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "destChainSelector",
+              "type": "uint64"
+            }
+          ],
+          "type": "error",
+          "name": "UnsupportedDestinationChain"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "destinationChainSelector",
+              "type": "uint64"
+            },
+            {
+              "internalType": "struct Client.EVM2AnyMessage",
+              "name": "message",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "bytes",
+                  "name": "receiver",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "struct Client.EVMTokenAmount[]",
+                  "name": "tokenAmounts",
+                  "type": "tuple[]",
+                  "components": [
+                    {
+                      "internalType": "address",
+                      "name": "token",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "amount",
+                      "type": "uint256"
+                    }
+                  ]
+                },
+                {
+                  "internalType": "address",
+                  "name": "feeToken",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "extraArgs",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "payable",
+          "type": "function",
+          "name": "ccipSend",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "destinationChainSelector",
+              "type": "uint64"
+            },
+            {
+              "internalType": "struct Client.EVM2AnyMessage",
+              "name": "message",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "bytes",
+                  "name": "receiver",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                },
+                {
+                  "internalType": "struct Client.EVMTokenAmount[]",
+                  "name": "tokenAmounts",
+                  "type": "tuple[]",
+                  "components": [
+                    {
+                      "internalType": "address",
+                      "name": "token",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "amount",
+                      "type": "uint256"
+                    }
+                  ]
+                },
+                {
+                  "internalType": "address",
+                  "name": "feeToken",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "extraArgs",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getFee",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "fee",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "chainSelector",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getSupportedTokens",
+          "outputs": [
+            {
+              "internalType": "address[]",
+              "name": "tokens",
+              "type": "address[]"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "chainSelector",
+              "type": "uint64"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isChainSupported",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "supported",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "ccipSend(uint64,(bytes,bytes,(address,uint256)[],address,bytes))": {
+            "details": "Note if msg.value is larger than the required fee (from getFee) we accept the overpayment with no refund.",
+            "params": {
+              "destinationChainSelector": "The destination chain ID",
+              "message": "The cross-chain CCIP message including data and/or tokens"
+            },
+            "returns": {
+              "_0": "messageId The message ID"
+            }
+          },
+          "getFee(uint64,(bytes,bytes,(address,uint256)[],address,bytes))": {
+            "details": "returns 0 fee on invalid message.",
+            "params": {
+              "destinationChainSelector": "The destination chainSelector",
+              "message": "The cross-chain CCIP message including data and/or tokens"
+            },
+            "returns": {
+              "fee": "returns guaranteed execution fee for the specified message delivery to destination chain"
+            }
+          },
+          "getSupportedTokens(uint64)": {
+            "params": {
+              "chainSelector": "The chainSelector."
+            },
+            "returns": {
+              "tokens": "The addresses of all tokens that are supported."
+            }
+          },
+          "isChainSupported(uint64)": {
+            "params": {
+              "chainSelector": "The chain to check."
+            },
+            "returns": {
+              "supported": "is true if it is supported, false if not."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "ccipSend(uint64,(bytes,bytes,(address,uint256)[],address,bytes))": {
+            "notice": "Request a message to be sent to the destination chain"
+          },
+          "getSupportedTokens(uint64)": {
+            "notice": "Gets a list of all supported tokens which can be sent or received to/from a given chain id."
+          },
+          "isChainSupported(uint64)": {
+            "notice": "Checks if the given chain ID is supported for sending/receiving."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/",
+        "@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/",
+        "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+        "@eth-optimism/=node_modules/@eth-optimism/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/",
+        "chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/interfaces/IRouterClient.sol": "IRouterClient"
+      },
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/interfaces/IRouterClient.sol": {
+        "keccak256": "0xbf5471e441597fcf9a04280d222474b18f87fea901116dd3c4c20823009332fc",
+        "urls": [
+          "bzz-raw://93514ee7e3ba94ba5fbb6904045ad1fe6bdc85e53cd45dd888b9756dbf7a0e7b",
+          "dweb:/ipfs/QmcitG6SVwvNCvgvzpye1yX4HFR33urJFCDTwX4d1rUepu"
+        ],
+        "license": "BUSL-1.1"
+      },
+      "node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol": {
+        "keccak256": "0x1155a7a1111159f6f90c1eff989301d99ae80f52cbfcdbebbc941d4e78e6ea0e",
+        "urls": [
+          "bzz-raw://f880a135abf5eb44da2db12ef91621c662b674edda93256977cb2740f728e39f",
+          "dweb:/ipfs/QmdKehLeE9Af2Lt92DGXsb1YHiQu9tcQRQQKaAQQZeyQfb"
+        ],
+        "license": "BUSL-1.1"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/interfaces/IRouterClient.sol",
+    "id": 36414,
+    "exportedSymbols": {
+      "Client": [
+        36470
+      ],
+      "IRouterClient": [
+        36413
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:1800:49",
+    "nodes": [
+      {
+        "id": 36363,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:49",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 36365,
+        "nodeType": "ImportDirective",
+        "src": "62:47:49",
+        "nodes": [],
+        "absolutePath": "node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol",
+        "file": "../libraries/Client.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 36414,
+        "sourceUnit": 36471,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 36364,
+              "name": "Client",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 36470,
+              "src": "70:6:49",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 36413,
+        "nodeType": "ContractDefinition",
+        "src": "111:1725:49",
+        "nodes": [
+          {
+            "id": 36369,
+            "nodeType": "ErrorDefinition",
+            "src": "139:60:49",
+            "nodes": [],
+            "errorSelector": "ae236d9c",
+            "name": "UnsupportedDestinationChain",
+            "nameLocation": "145:27:49",
+            "parameters": {
+              "id": 36368,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36367,
+                  "mutability": "mutable",
+                  "name": "destChainSelector",
+                  "nameLocation": "180:17:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36369,
+                  "src": "173:24:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 36366,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "173:6:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "172:26:49"
+            }
+          },
+          {
+            "id": 36371,
+            "nodeType": "ErrorDefinition",
+            "src": "202:35:49",
+            "nodes": [],
+            "errorSelector": "07da6ee6",
+            "name": "InsufficientFeeTokenAmount",
+            "nameLocation": "208:26:49",
+            "parameters": {
+              "id": 36370,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "234:2:49"
+            }
+          },
+          {
+            "id": 36373,
+            "nodeType": "ErrorDefinition",
+            "src": "240:24:49",
+            "nodes": [],
+            "errorSelector": "1841b4e1",
+            "name": "InvalidMsgValue",
+            "nameLocation": "246:15:49",
+            "parameters": {
+              "id": 36372,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "261:2:49"
+            }
+          },
+          {
+            "id": 36381,
+            "nodeType": "FunctionDefinition",
+            "src": "460:87:49",
+            "nodes": [],
+            "documentation": {
+              "id": 36374,
+              "nodeType": "StructuredDocumentation",
+              "src": "268:189:49",
+              "text": "@notice Checks if the given chain ID is supported for sending/receiving.\n @param chainSelector The chain to check.\n @return supported is true if it is supported, false if not."
+            },
+            "functionSelector": "a48a9058",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isChainSupported",
+            "nameLocation": "469:16:49",
+            "parameters": {
+              "id": 36377,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36376,
+                  "mutability": "mutable",
+                  "name": "chainSelector",
+                  "nameLocation": "493:13:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36381,
+                  "src": "486:20:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 36375,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "486:6:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "485:22:49"
+            },
+            "returnParameters": {
+              "id": 36380,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36379,
+                  "mutability": "mutable",
+                  "name": "supported",
+                  "nameLocation": "536:9:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36381,
+                  "src": "531:14:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 36378,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "531:4:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "530:16:49"
+            },
+            "scope": 36413,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36390,
+            "nodeType": "FunctionDefinition",
+            "src": "778:98:49",
+            "nodes": [],
+            "documentation": {
+              "id": 36382,
+              "nodeType": "StructuredDocumentation",
+              "src": "551:224:49",
+              "text": "@notice Gets a list of all supported tokens which can be sent or received\n to/from a given chain id.\n @param chainSelector The chainSelector.\n @return tokens The addresses of all tokens that are supported."
+            },
+            "functionSelector": "fbca3b74",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSupportedTokens",
+            "nameLocation": "787:18:49",
+            "parameters": {
+              "id": 36385,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36384,
+                  "mutability": "mutable",
+                  "name": "chainSelector",
+                  "nameLocation": "813:13:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36390,
+                  "src": "806:20:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 36383,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "806:6:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "805:22:49"
+            },
+            "returnParameters": {
+              "id": 36389,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36388,
+                  "mutability": "mutable",
+                  "name": "tokens",
+                  "nameLocation": "868:6:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36390,
+                  "src": "851:23:49",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 36386,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "851:7:49",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 36387,
+                    "nodeType": "ArrayTypeName",
+                    "src": "851:9:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "850:25:49"
+            },
+            "scope": 36413,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36401,
+            "nodeType": "FunctionDefinition",
+            "src": "1185:135:49",
+            "nodes": [],
+            "documentation": {
+              "id": 36391,
+              "nodeType": "StructuredDocumentation",
+              "src": "880:302:49",
+              "text": "@param destinationChainSelector The destination chainSelector\n @param message The cross-chain CCIP message including data and/or tokens\n @return fee returns guaranteed execution fee for the specified message\n delivery to destination chain\n @dev returns 0 fee on invalid message."
+            },
+            "functionSelector": "20487ded",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getFee",
+            "nameLocation": "1194:6:49",
+            "parameters": {
+              "id": 36397,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36393,
+                  "mutability": "mutable",
+                  "name": "destinationChainSelector",
+                  "nameLocation": "1213:24:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36401,
+                  "src": "1206:31:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 36392,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1206:6:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 36396,
+                  "mutability": "mutable",
+                  "name": "message",
+                  "nameLocation": "1272:7:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36401,
+                  "src": "1243:36:49",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_EVM2AnyMessage_$36446_memory_ptr",
+                    "typeString": "struct Client.EVM2AnyMessage"
+                  },
+                  "typeName": {
+                    "id": 36395,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 36394,
+                      "name": "Client.EVM2AnyMessage",
+                      "nameLocations": [
+                        "1243:6:49",
+                        "1250:14:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36446,
+                      "src": "1243:21:49"
+                    },
+                    "referencedDeclaration": 36446,
+                    "src": "1243:21:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_EVM2AnyMessage_$36446_storage_ptr",
+                      "typeString": "struct Client.EVM2AnyMessage"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1200:83:49"
+            },
+            "returnParameters": {
+              "id": 36400,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36399,
+                  "mutability": "mutable",
+                  "name": "fee",
+                  "nameLocation": "1315:3:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36401,
+                  "src": "1307:11:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 36398,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1307:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1306:13:49"
+            },
+            "scope": 36413,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36412,
+            "nodeType": "FunctionDefinition",
+            "src": "1696:138:49",
+            "nodes": [],
+            "documentation": {
+              "id": 36402,
+              "nodeType": "StructuredDocumentation",
+              "src": "1324:369:49",
+              "text": "@notice Request a message to be sent to the destination chain\n @param destinationChainSelector The destination chain ID\n @param message The cross-chain CCIP message including data and/or tokens\n @return messageId The message ID\n @dev Note if msg.value is larger than the required fee (from getFee) we accept\n the overpayment with no refund."
+            },
+            "functionSelector": "96f4e9f9",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "ccipSend",
+            "nameLocation": "1705:8:49",
+            "parameters": {
+              "id": 36408,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36404,
+                  "mutability": "mutable",
+                  "name": "destinationChainSelector",
+                  "nameLocation": "1726:24:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36412,
+                  "src": "1719:31:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 36403,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1719:6:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 36407,
+                  "mutability": "mutable",
+                  "name": "message",
+                  "nameLocation": "1787:7:49",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36412,
+                  "src": "1756:38:49",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_EVM2AnyMessage_$36446_calldata_ptr",
+                    "typeString": "struct Client.EVM2AnyMessage"
+                  },
+                  "typeName": {
+                    "id": 36406,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 36405,
+                      "name": "Client.EVM2AnyMessage",
+                      "nameLocations": [
+                        "1756:6:49",
+                        "1763:14:49"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36446,
+                      "src": "1756:21:49"
+                    },
+                    "referencedDeclaration": 36446,
+                    "src": "1756:21:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_EVM2AnyMessage_$36446_storage_ptr",
+                      "typeString": "struct Client.EVM2AnyMessage"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1713:85:49"
+            },
+            "returnParameters": {
+              "id": 36411,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36410,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36412,
+                  "src": "1825:7:49",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 36409,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1825:7:49",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1824:9:49"
+            },
+            "scope": 36413,
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IRouterClient",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          36413
+        ],
+        "name": "IRouterClient",
+        "nameLocation": "121:13:49",
+        "scope": 36414,
+        "usedErrors": [
+          36369,
+          36371,
+          36373
+        ]
+      }
+    ],
+    "license": "BUSL-1.1"
+  },
+  "id": 49
+}

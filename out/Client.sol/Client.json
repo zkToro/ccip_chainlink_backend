@@ -1,0 +1,855 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "EVM_EXTRA_ARGS_V1_TAG",
+      "outputs": [
+        {
+          "internalType": "bytes4",
+          "name": "",
+          "type": "bytes4"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60808060405234601857607b908161001e823930815050f35b600080fdfe6080806040526004361015601257600080fd5b60003560e01c633ab8c0d014602657600080fd5b60003660031901126040576397a657c960e01b8152602090f35b600080fdfea2646970667358221220b1b1bb3692068b75447686f9cfe76a3f8df75070bfedc8a5842e47e69ac88b1564736f6c63430008130033",
+    "sourceMap": "87:1465:50:-:0;;;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x6080806040526004361015601257600080fd5b60003560e01c633ab8c0d014602657600080fd5b60003660031901126040576397a657c960e01b8152602090f35b600080fdfea2646970667358221220b1b1bb3692068b75447686f9cfe76a3f8df75070bfedc8a5842e47e69ac88b1564736f6c63430008130033",
+    "sourceMap": "87:1465:50:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;87:1465:50;;;;-1:-1:-1;;;87:1465:50;;;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "EVM_EXTRA_ARGS_V1_TAG()": "3ab8c0d0"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"EVM_EXTRA_ARGS_V1_TAG\",\"outputs\":[{\"internalType\":\"bytes4\",\"name\":\"\",\"type\":\"bytes4\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol\":\"Client\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol\":{\"keccak256\":\"0x1155a7a1111159f6f90c1eff989301d99ae80f52cbfcdbebbc941d4e78e6ea0e\",\"license\":\"BUSL-1.1\",\"urls\":[\"bzz-raw://f880a135abf5eb44da2db12ef91621c662b674edda93256977cb2740f728e39f\",\"dweb:/ipfs/QmdKehLeE9Af2Lt92DGXsb1YHiQu9tcQRQQKaAQQZeyQfb\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "EVM_EXTRA_ARGS_V1_TAG",
+          "outputs": [
+            {
+              "internalType": "bytes4",
+              "name": "",
+              "type": "bytes4"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/",
+        "@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/",
+        "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+        "@eth-optimism/=node_modules/@eth-optimism/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/",
+        "chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol": "Client"
+      },
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol": {
+        "keccak256": "0x1155a7a1111159f6f90c1eff989301d99ae80f52cbfcdbebbc941d4e78e6ea0e",
+        "urls": [
+          "bzz-raw://f880a135abf5eb44da2db12ef91621c662b674edda93256977cb2740f728e39f",
+          "dweb:/ipfs/QmdKehLeE9Af2Lt92DGXsb1YHiQu9tcQRQQKaAQQZeyQfb"
+        ],
+        "license": "BUSL-1.1"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@chainlink/contracts-ccip/src/v0.8/ccip/libraries/Client.sol",
+    "id": 36471,
+    "exportedSymbols": {
+      "Client": [
+        36470
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "37:1516:50",
+    "nodes": [
+      {
+        "id": 36415,
+        "nodeType": "PragmaDirective",
+        "src": "37:23:50",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 36470,
+        "nodeType": "ContractDefinition",
+        "src": "87:1465:50",
+        "nodes": [
+          {
+            "id": 36420,
+            "nodeType": "StructDefinition",
+            "src": "106:124:50",
+            "nodes": [],
+            "canonicalName": "Client.EVMTokenAmount",
+            "members": [
+              {
+                "constant": false,
+                "id": 36417,
+                "mutability": "mutable",
+                "name": "token",
+                "nameLocation": "142:5:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36420,
+                "src": "134:13:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 36416,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "134:7:50",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36419,
+                "mutability": "mutable",
+                "name": "amount",
+                "nameLocation": "198:6:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36420,
+                "src": "190:14:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 36418,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "190:7:50",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "EVMTokenAmount",
+            "nameLocation": "113:14:50",
+            "scope": 36470,
+            "visibility": "public"
+          },
+          {
+            "id": 36433,
+            "nodeType": "StructDefinition",
+            "src": "234:390:50",
+            "nodes": [],
+            "canonicalName": "Client.Any2EVMMessage",
+            "members": [
+              {
+                "constant": false,
+                "id": 36422,
+                "mutability": "mutable",
+                "name": "messageId",
+                "nameLocation": "270:9:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36433,
+                "src": "262:17:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 36421,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "262:7:50",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36424,
+                "mutability": "mutable",
+                "name": "sourceChainSelector",
+                "nameLocation": "342:19:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36433,
+                "src": "335:26:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint64",
+                  "typeString": "uint64"
+                },
+                "typeName": {
+                  "id": 36423,
+                  "name": "uint64",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "335:6:50",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36426,
+                "mutability": "mutable",
+                "name": "sender",
+                "nameLocation": "399:6:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36433,
+                "src": "393:12:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 36425,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "393:5:50",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36428,
+                "mutability": "mutable",
+                "name": "data",
+                "nameLocation": "468:4:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36433,
+                "src": "462:10:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 36427,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "462:5:50",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36432,
+                "mutability": "mutable",
+                "name": "destTokenAmounts",
+                "nameLocation": "532:16:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36433,
+                "src": "515:33:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_EVMTokenAmount_$36420_storage_$dyn_storage_ptr",
+                  "typeString": "struct Client.EVMTokenAmount[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 36430,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 36429,
+                      "name": "EVMTokenAmount",
+                      "nameLocations": [
+                        "515:14:50"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36420,
+                      "src": "515:14:50"
+                    },
+                    "referencedDeclaration": 36420,
+                    "src": "515:14:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_EVMTokenAmount_$36420_storage_ptr",
+                      "typeString": "struct Client.EVMTokenAmount"
+                    }
+                  },
+                  "id": 36431,
+                  "nodeType": "ArrayTypeName",
+                  "src": "515:16:50",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_EVMTokenAmount_$36420_storage_$dyn_storage_ptr",
+                    "typeString": "struct Client.EVMTokenAmount[]"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Any2EVMMessage",
+            "nameLocation": "241:14:50",
+            "scope": 36470,
+            "visibility": "public"
+          },
+          {
+            "id": 36446,
+            "nodeType": "StructDefinition",
+            "src": "712:345:50",
+            "nodes": [],
+            "canonicalName": "Client.EVM2AnyMessage",
+            "members": [
+              {
+                "constant": false,
+                "id": 36435,
+                "mutability": "mutable",
+                "name": "receiver",
+                "nameLocation": "746:8:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36446,
+                "src": "740:14:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 36434,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "740:5:50",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36437,
+                "mutability": "mutable",
+                "name": "data",
+                "nameLocation": "818:4:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36446,
+                "src": "812:10:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 36436,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "812:5:50",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36441,
+                "mutability": "mutable",
+                "name": "tokenAmounts",
+                "nameLocation": "861:12:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36446,
+                "src": "844:29:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_EVMTokenAmount_$36420_storage_$dyn_storage_ptr",
+                  "typeString": "struct Client.EVMTokenAmount[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 36439,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 36438,
+                      "name": "EVMTokenAmount",
+                      "nameLocations": [
+                        "844:14:50"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36420,
+                      "src": "844:14:50"
+                    },
+                    "referencedDeclaration": 36420,
+                    "src": "844:14:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_EVMTokenAmount_$36420_storage_ptr",
+                      "typeString": "struct Client.EVMTokenAmount"
+                    }
+                  },
+                  "id": 36440,
+                  "nodeType": "ArrayTypeName",
+                  "src": "844:16:50",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_EVMTokenAmount_$36420_storage_$dyn_storage_ptr",
+                    "typeString": "struct Client.EVMTokenAmount[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36443,
+                "mutability": "mutable",
+                "name": "feeToken",
+                "nameLocation": "906:8:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36446,
+                "src": "898:16:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 36442,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "898:7:50",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36445,
+                "mutability": "mutable",
+                "name": "extraArgs",
+                "nameLocation": "992:9:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36446,
+                "src": "986:15:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 36444,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "986:5:50",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "EVM2AnyMessage",
+            "nameLocation": "719:14:50",
+            "scope": 36470,
+            "visibility": "public"
+          },
+          {
+            "id": 36449,
+            "nodeType": "VariableDeclaration",
+            "src": "1159:57:50",
+            "nodes": [],
+            "constant": true,
+            "functionSelector": "3ab8c0d0",
+            "mutability": "constant",
+            "name": "EVM_EXTRA_ARGS_V1_TAG",
+            "nameLocation": "1182:21:50",
+            "scope": 36470,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 36447,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "1159:6:50",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "hexValue": "30783937613635376339",
+              "id": 36448,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "1206:10:50",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2544261065_by_1",
+                "typeString": "int_const 2544261065"
+              },
+              "value": "0x97a657c9"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 36454,
+            "nodeType": "StructDefinition",
+            "src": "1220:156:50",
+            "nodes": [],
+            "canonicalName": "Client.EVMExtraArgsV1",
+            "members": [
+              {
+                "constant": false,
+                "id": 36451,
+                "mutability": "mutable",
+                "name": "gasLimit",
+                "nameLocation": "1256:8:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36454,
+                "src": "1248:16:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 36450,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1248:7:50",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 36453,
+                "mutability": "mutable",
+                "name": "strict",
+                "nameLocation": "1325:6:50",
+                "nodeType": "VariableDeclaration",
+                "scope": 36454,
+                "src": "1320:11:50",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 36452,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1320:4:50",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "EVMExtraArgsV1",
+            "nameLocation": "1227:14:50",
+            "scope": 36470,
+            "visibility": "public"
+          },
+          {
+            "id": 36469,
+            "nodeType": "FunctionDefinition",
+            "src": "1380:170:50",
+            "nodes": [],
+            "body": {
+              "id": 36468,
+              "nodeType": "Block",
+              "src": "1476:74:50",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 36464,
+                        "name": "EVM_EXTRA_ARGS_V1_TAG",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36449,
+                        "src": "1512:21:50",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      {
+                        "id": 36465,
+                        "name": "extraArgs",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36457,
+                        "src": "1535:9:50",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_EVMExtraArgsV1_$36454_memory_ptr",
+                          "typeString": "struct Client.EVMExtraArgsV1 memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        },
+                        {
+                          "typeIdentifier": "t_struct$_EVMExtraArgsV1_$36454_memory_ptr",
+                          "typeString": "struct Client.EVMExtraArgsV1 memory"
+                        }
+                      ],
+                      "expression": {
+                        "id": 36462,
+                        "name": "abi",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": -1,
+                        "src": "1489:3:50",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_abi",
+                          "typeString": "abi"
+                        }
+                      },
+                      "id": 36463,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "memberLocation": "1493:18:50",
+                      "memberName": "encodeWithSelector",
+                      "nodeType": "MemberAccess",
+                      "src": "1489:22:50",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_abiencodewithselector_pure$_t_bytes4_$returns$_t_bytes_memory_ptr_$",
+                        "typeString": "function (bytes4) pure returns (bytes memory)"
+                      }
+                    },
+                    "id": 36466,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1489:56:50",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_memory_ptr",
+                      "typeString": "bytes memory"
+                    }
+                  },
+                  "functionReturnParameters": 36461,
+                  "id": 36467,
+                  "nodeType": "Return",
+                  "src": "1482:63:50"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_argsToBytes",
+            "nameLocation": "1389:12:50",
+            "parameters": {
+              "id": 36458,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36457,
+                  "mutability": "mutable",
+                  "name": "extraArgs",
+                  "nameLocation": "1424:9:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36469,
+                  "src": "1402:31:50",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_EVMExtraArgsV1_$36454_memory_ptr",
+                    "typeString": "struct Client.EVMExtraArgsV1"
+                  },
+                  "typeName": {
+                    "id": 36456,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 36455,
+                      "name": "EVMExtraArgsV1",
+                      "nameLocations": [
+                        "1402:14:50"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 36454,
+                      "src": "1402:14:50"
+                    },
+                    "referencedDeclaration": 36454,
+                    "src": "1402:14:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_EVMExtraArgsV1_$36454_storage_ptr",
+                      "typeString": "struct Client.EVMExtraArgsV1"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1401:33:50"
+            },
+            "returnParameters": {
+              "id": 36461,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36460,
+                  "mutability": "mutable",
+                  "name": "bts",
+                  "nameLocation": "1471:3:50",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36469,
+                  "src": "1458:16:50",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 36459,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1458:5:50",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1457:18:50"
+            },
+            "scope": 36470,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Client",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          36470
+        ],
+        "name": "Client",
+        "nameLocation": "95:6:50",
+        "scope": 36471,
+        "usedErrors": []
+      }
+    ],
+    "license": "BUSL-1.1"
+  },
+  "id": 50
+}

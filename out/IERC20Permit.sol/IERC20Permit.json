@@ -1,0 +1,673 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "DOMAIN_SEPARATOR",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "name": "nonces",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "value",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "deadline",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint8",
+          "name": "v",
+          "type": "uint8"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "r",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "s",
+          "type": "bytes32"
+        }
+      ],
+      "name": "permit",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "DOMAIN_SEPARATOR()": "3644e515",
+    "nonces(address)": "7ecebe00",
+    "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)": "d505accf"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"DOMAIN_SEPARATOR\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"}],\"name\":\"nonces\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"spender\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"value\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"},{\"internalType\":\"uint8\",\"name\":\"v\",\"type\":\"uint8\"},{\"internalType\":\"bytes32\",\"name\":\"r\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"s\",\"type\":\"bytes32\"}],\"name\":\"permit\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface of the ERC20 Permit extension allowing approvals to be made via signatures, as defined in https://eips.ethereum.org/EIPS/eip-2612[EIP-2612]. Adds the {permit} method, which can be used to change an account's ERC20 allowance (see {IERC20-allowance}) by presenting a message signed by the account. By not relying on {IERC20-approve}, the token holder account doesn't need to send a transaction, and thus is not required to hold Ether at all.\",\"kind\":\"dev\",\"methods\":{\"DOMAIN_SEPARATOR()\":{\"details\":\"Returns the domain separator used in the encoding of the signature for {permit}, as defined by {EIP712}.\"},\"nonces(address)\":{\"details\":\"Returns the current nonce for `owner`. This value must be included whenever a signature is generated for {permit}. Every successful call to {permit} increases ``owner``'s nonce by one. This prevents a signature from being used multiple times.\"},\"permit(address,address,uint256,uint256,uint8,bytes32,bytes32)\":{\"details\":\"Sets `value` as the allowance of `spender` over ``owner``'s tokens, given ``owner``'s signed approval. IMPORTANT: The same issues {IERC20-approve} has related to transaction ordering also apply here. Emits an {Approval} event. Requirements: - `spender` cannot be the zero address. - `deadline` must be a timestamp in the future. - `v`, `r` and `s` must be a valid `secp256k1` signature from `owner` over the EIP712-formatted function arguments. - the signature must use ``owner``'s current nonce (see {nonces}). For more information on the signature format, see the https://eips.ethereum.org/EIPS/eip-2612#specification[relevant EIP section].\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol\":\"IERC20Permit\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol\":{\"keccak256\":\"0x35e258421ae206f3db37281cea70871b4c3553914734aa76139a41af60ac1abb\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2ef94b6bc4ee356db612a1849c615f7dd4b15542d6c8584c86bb9243a7913cf0\",\"dweb:/ipfs/QmaxFj5NFpAjjitZtHPNS9PPtCuBATaRz9ktDDRCQCQ83y\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "DOMAIN_SEPARATOR",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "",
+              "type": "bytes32"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "nonces",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "spender",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "value",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint8",
+              "name": "v",
+              "type": "uint8"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "r",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "s",
+              "type": "bytes32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "permit"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "DOMAIN_SEPARATOR()": {
+            "details": "Returns the domain separator used in the encoding of the signature for {permit}, as defined by {EIP712}."
+          },
+          "nonces(address)": {
+            "details": "Returns the current nonce for `owner`. This value must be included whenever a signature is generated for {permit}. Every successful call to {permit} increases ``owner``'s nonce by one. This prevents a signature from being used multiple times."
+          },
+          "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)": {
+            "details": "Sets `value` as the allowance of `spender` over ``owner``'s tokens, given ``owner``'s signed approval. IMPORTANT: The same issues {IERC20-approve} has related to transaction ordering also apply here. Emits an {Approval} event. Requirements: - `spender` cannot be the zero address. - `deadline` must be a timestamp in the future. - `v`, `r` and `s` must be a valid `secp256k1` signature from `owner` over the EIP712-formatted function arguments. - the signature must use ``owner``'s current nonce (see {nonces}). For more information on the signature format, see the https://eips.ethereum.org/EIPS/eip-2612#specification[relevant EIP section]."
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/",
+        "@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/",
+        "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+        "@eth-optimism/=node_modules/@eth-optimism/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/",
+        "chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol": "IERC20Permit"
+      },
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol": {
+        "keccak256": "0x35e258421ae206f3db37281cea70871b4c3553914734aa76139a41af60ac1abb",
+        "urls": [
+          "bzz-raw://2ef94b6bc4ee356db612a1849c615f7dd4b15542d6c8584c86bb9243a7913cf0",
+          "dweb:/ipfs/QmaxFj5NFpAjjitZtHPNS9PPtCuBATaRz9ktDDRCQCQ83y"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Permit.sol",
+    "id": 30922,
+    "exportedSymbols": {
+      "IERC20Permit": [
+        30921
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "108:2138:28",
+    "nodes": [
+      {
+        "id": 30887,
+        "nodeType": "PragmaDirective",
+        "src": "108:23:28",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 30921,
+        "nodeType": "ContractDefinition",
+        "src": "614:1631:28",
+        "nodes": [
+          {
+            "id": 30906,
+            "nodeType": "FunctionDefinition",
+            "src": "1440:183:28",
+            "nodes": [],
+            "documentation": {
+              "id": 30889,
+              "nodeType": "StructuredDocumentation",
+              "src": "643:792:28",
+              "text": " @dev Sets `value` as the allowance of `spender` over ``owner``'s tokens,\n given ``owner``'s signed approval.\n IMPORTANT: The same issues {IERC20-approve} has related to transaction\n ordering also apply here.\n Emits an {Approval} event.\n Requirements:\n - `spender` cannot be the zero address.\n - `deadline` must be a timestamp in the future.\n - `v`, `r` and `s` must be a valid `secp256k1` signature from `owner`\n over the EIP712-formatted function arguments.\n - the signature must use ``owner``'s current nonce (see {nonces}).\n For more information on the signature format, see the\n https://eips.ethereum.org/EIPS/eip-2612#specification[relevant EIP\n section]."
+            },
+            "functionSelector": "d505accf",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "permit",
+            "nameLocation": "1449:6:28",
+            "parameters": {
+              "id": 30904,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30891,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "1473:5:28",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30906,
+                  "src": "1465:13:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 30890,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1465:7:28",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30893,
+                  "mutability": "mutable",
+                  "name": "spender",
+                  "nameLocation": "1496:7:28",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30906,
+                  "src": "1488:15:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 30892,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1488:7:28",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30895,
+                  "mutability": "mutable",
+                  "name": "value",
+                  "nameLocation": "1521:5:28",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30906,
+                  "src": "1513:13:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30894,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1513:7:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30897,
+                  "mutability": "mutable",
+                  "name": "deadline",
+                  "nameLocation": "1544:8:28",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30906,
+                  "src": "1536:16:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30896,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1536:7:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30899,
+                  "mutability": "mutable",
+                  "name": "v",
+                  "nameLocation": "1568:1:28",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30906,
+                  "src": "1562:7:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 30898,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1562:5:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30901,
+                  "mutability": "mutable",
+                  "name": "r",
+                  "nameLocation": "1587:1:28",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30906,
+                  "src": "1579:9:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 30900,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1579:7:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 30903,
+                  "mutability": "mutable",
+                  "name": "s",
+                  "nameLocation": "1606:1:28",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30906,
+                  "src": "1598:9:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 30902,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1598:7:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1455:158:28"
+            },
+            "returnParameters": {
+              "id": 30905,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1622:0:28"
+            },
+            "scope": 30921,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 30914,
+            "nodeType": "FunctionDefinition",
+            "src": "1928:63:28",
+            "nodes": [],
+            "documentation": {
+              "id": 30907,
+              "nodeType": "StructuredDocumentation",
+              "src": "1629:294:28",
+              "text": " @dev Returns the current nonce for `owner`. This value must be\n included whenever a signature is generated for {permit}.\n Every successful call to {permit} increases ``owner``'s nonce by one. This\n prevents a signature from being used multiple times."
+            },
+            "functionSelector": "7ecebe00",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "nonces",
+            "nameLocation": "1937:6:28",
+            "parameters": {
+              "id": 30910,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30909,
+                  "mutability": "mutable",
+                  "name": "owner",
+                  "nameLocation": "1952:5:28",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30914,
+                  "src": "1944:13:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 30908,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1944:7:28",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1943:15:28"
+            },
+            "returnParameters": {
+              "id": 30913,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30912,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30914,
+                  "src": "1982:7:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30911,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1982:7:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1981:9:28"
+            },
+            "scope": 30921,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 30920,
+            "nodeType": "FunctionDefinition",
+            "src": "2183:60:28",
+            "nodes": [],
+            "documentation": {
+              "id": 30915,
+              "nodeType": "StructuredDocumentation",
+              "src": "1997:128:28",
+              "text": " @dev Returns the domain separator used in the encoding of the signature for {permit}, as defined by {EIP712}."
+            },
+            "functionSelector": "3644e515",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "DOMAIN_SEPARATOR",
+            "nameLocation": "2192:16:28",
+            "parameters": {
+              "id": 30916,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2208:2:28"
+            },
+            "returnParameters": {
+              "id": 30919,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30918,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 30920,
+                  "src": "2234:7:28",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 30917,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2234:7:28",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2233:9:28"
+            },
+            "scope": 30921,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IERC20Permit",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 30888,
+          "nodeType": "StructuredDocumentation",
+          "src": "133:480:28",
+          "text": " @dev Interface of the ERC20 Permit extension allowing approvals to be made via signatures, as defined in\n https://eips.ethereum.org/EIPS/eip-2612[EIP-2612].\n Adds the {permit} method, which can be used to change an account's ERC20 allowance (see {IERC20-allowance}) by\n presenting a message signed by the account. By not relying on {IERC20-approve}, the token holder account doesn't\n need to send a transaction, and thus is not required to hold Ether at all."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          30921
+        ],
+        "name": "IERC20Permit",
+        "nameLocation": "624:12:28",
+        "scope": 30922,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 28
+}

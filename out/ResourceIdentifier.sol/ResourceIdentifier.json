@@ -1,0 +1,1099 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x60808060405234601757603a9081601d823930815050f35b600080fdfe600080fdfea2646970667358221220d33bb114212e592d11f40881eec4e0e70a6f90f0a4c0dd7a0f19d1d84ad61d6d64736f6c63430008130033",
+    "sourceMap": "487:1431:92:-:0;;;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x600080fdfea2646970667358221220d33bb114212e592d11f40881eec4e0e70a6f90f0a4c0dd7a0f19d1d84ad61d6d64736f6c63430008130033",
+    "sourceMap": "487:1431:92:-:0;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {},
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Set Protocol A collection of utility functions to fetch information related to Resource contracts in the system\",\"kind\":\"dev\",\"methods\":{},\"title\":\"ResourceIdentifier\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/SetProtocol/lib/ResourceIdentifier.sol\":\"ResourceIdentifier\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x00c839ff53d07d19db2e7cfa1e5133f9ee90a8d64b0e2e57f50446a2d1a3a0e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3dac621d015a68a5251b1e5d41dda0faf252699bf6e8bcf46a958b29964d9dd1\",\"dweb:/ipfs/QmP9axjgZv4cezAhALoTemM62sdLtMDJ9MGTxECnNwHgSJ\"]},\"src/SetProtocol/interfaces/IController.sol\":{\"keccak256\":\"0xa6c8cb94b834e8c31c53fc949240e08a004ba27a0641d393f226ac2a167b61bd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3f351aa9e6b21e5f6231757fbf6f65c4650f1aef5779b964e485ead6c5a8fc1a\",\"dweb:/ipfs/QmeuDuc1c8t6vR7WE13VVfvaEhHAwhNnmeoCzTuGb8CZHF\"]},\"src/SetProtocol/interfaces/IIntegrationRegistry.sol\":{\"keccak256\":\"0x62251c67b474cd5fefd02ea4c99a3219f7f72c537b3b2c835f973d400e837276\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1ba1253c186d0928bc57954c01989c8cc0d172b915302160517ffe59e9614a46\",\"dweb:/ipfs/Qmbs3c7N9TWjtwJHS6m8TZBpSB8aLpssHVMM4jYRNuqpFG\"]},\"src/SetProtocol/interfaces/IPriceOracle.sol\":{\"keccak256\":\"0xa58e9aefa1cba7b995acb3819153ab7e0f93df6f0513d0ad4a0eee56bb6bde87\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1c0c273143e97984adb18c0da344ed730766e179d6ebdfa081a86ba925c9ad29\",\"dweb:/ipfs/QmenEmRotMUm3Xh1D65F3WkhHMrwzPDciGYiieNhdbDiYb\"]},\"src/SetProtocol/interfaces/ISetToken.sol\":{\"keccak256\":\"0x0590cde332fffa13eb93bcbad5c700cb7093ae340dea11658a0f2e52c24c0d2a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://95f08bd5da168a54f726c8a87f3c2686712fa61cc0abee7d8673952a293fe66f\",\"dweb:/ipfs/QmcZvbEgsidq5T2ASN35rE2ogj3TcLLGfdeyrb4dbWEDJd\"]},\"src/SetProtocol/interfaces/ISetValuer.sol\":{\"keccak256\":\"0x1afa9de9adf826a9c6fd6ba94235a4ed254fbce71b6a4ec9503809153ead88cc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4ab840939b47f5cec07899239073b9d9b9d87a788ee05c51bb5ae6abc345e69f\",\"dweb:/ipfs/QmcXUGv9nZ7BcbpxdYgGH7veCDYvBAYdrLVvXYUzxSj8Du\"]},\"src/SetProtocol/lib/ResourceIdentifier.sol\":{\"keccak256\":\"0xe46af02aca279a22ed1b92a080ea0bff5af93687966169e544da6cd1333ecebd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2ff18f7ef7db97a77a035a7094667998b110e2161175dbe701e63d9faf121771\",\"dweb:/ipfs/QmWmgwFHBTfoCi3bBy5y5SijJGHa8hT9sdzPpopxH2tKUH\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/",
+        "@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/",
+        "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+        "@eth-optimism/=node_modules/@eth-optimism/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/",
+        "chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/SetProtocol/lib/ResourceIdentifier.sol": "ResourceIdentifier"
+      },
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x00c839ff53d07d19db2e7cfa1e5133f9ee90a8d64b0e2e57f50446a2d1a3a0e0",
+        "urls": [
+          "bzz-raw://3dac621d015a68a5251b1e5d41dda0faf252699bf6e8bcf46a958b29964d9dd1",
+          "dweb:/ipfs/QmP9axjgZv4cezAhALoTemM62sdLtMDJ9MGTxECnNwHgSJ"
+        ],
+        "license": "MIT"
+      },
+      "src/SetProtocol/interfaces/IController.sol": {
+        "keccak256": "0xa6c8cb94b834e8c31c53fc949240e08a004ba27a0641d393f226ac2a167b61bd",
+        "urls": [
+          "bzz-raw://3f351aa9e6b21e5f6231757fbf6f65c4650f1aef5779b964e485ead6c5a8fc1a",
+          "dweb:/ipfs/QmeuDuc1c8t6vR7WE13VVfvaEhHAwhNnmeoCzTuGb8CZHF"
+        ],
+        "license": "MIT"
+      },
+      "src/SetProtocol/interfaces/IIntegrationRegistry.sol": {
+        "keccak256": "0x62251c67b474cd5fefd02ea4c99a3219f7f72c537b3b2c835f973d400e837276",
+        "urls": [
+          "bzz-raw://1ba1253c186d0928bc57954c01989c8cc0d172b915302160517ffe59e9614a46",
+          "dweb:/ipfs/Qmbs3c7N9TWjtwJHS6m8TZBpSB8aLpssHVMM4jYRNuqpFG"
+        ],
+        "license": "MIT"
+      },
+      "src/SetProtocol/interfaces/IPriceOracle.sol": {
+        "keccak256": "0xa58e9aefa1cba7b995acb3819153ab7e0f93df6f0513d0ad4a0eee56bb6bde87",
+        "urls": [
+          "bzz-raw://1c0c273143e97984adb18c0da344ed730766e179d6ebdfa081a86ba925c9ad29",
+          "dweb:/ipfs/QmenEmRotMUm3Xh1D65F3WkhHMrwzPDciGYiieNhdbDiYb"
+        ],
+        "license": "MIT"
+      },
+      "src/SetProtocol/interfaces/ISetToken.sol": {
+        "keccak256": "0x0590cde332fffa13eb93bcbad5c700cb7093ae340dea11658a0f2e52c24c0d2a",
+        "urls": [
+          "bzz-raw://95f08bd5da168a54f726c8a87f3c2686712fa61cc0abee7d8673952a293fe66f",
+          "dweb:/ipfs/QmcZvbEgsidq5T2ASN35rE2ogj3TcLLGfdeyrb4dbWEDJd"
+        ],
+        "license": "MIT"
+      },
+      "src/SetProtocol/interfaces/ISetValuer.sol": {
+        "keccak256": "0x1afa9de9adf826a9c6fd6ba94235a4ed254fbce71b6a4ec9503809153ead88cc",
+        "urls": [
+          "bzz-raw://4ab840939b47f5cec07899239073b9d9b9d87a788ee05c51bb5ae6abc345e69f",
+          "dweb:/ipfs/QmcXUGv9nZ7BcbpxdYgGH7veCDYvBAYdrLVvXYUzxSj8Du"
+        ],
+        "license": "MIT"
+      },
+      "src/SetProtocol/lib/ResourceIdentifier.sol": {
+        "keccak256": "0xe46af02aca279a22ed1b92a080ea0bff5af93687966169e544da6cd1333ecebd",
+        "urls": [
+          "bzz-raw://2ff18f7ef7db97a77a035a7094667998b110e2161175dbe701e63d9faf121771",
+          "dweb:/ipfs/QmWmgwFHBTfoCi3bBy5y5SijJGHa8hT9sdzPpopxH2tKUH"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/SetProtocol/lib/ResourceIdentifier.sol",
+    "id": 46558,
+    "exportedSymbols": {
+      "IController": [
+        44161
+      ],
+      "IIntegrationRegistry": [
+        44242
+      ],
+      "IPriceOracle": [
+        44322
+      ],
+      "ISetValuer": [
+        44592
+      ],
+      "ResourceIdentifier": [
+        46557
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:1885:92",
+    "nodes": [
+      {
+        "id": 46484,
+        "nodeType": "PragmaDirective",
+        "src": "33:23:92",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 46486,
+        "nodeType": "ImportDirective",
+        "src": "58:60:92",
+        "nodes": [],
+        "absolutePath": "src/SetProtocol/interfaces/IController.sol",
+        "file": "../interfaces/IController.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 46558,
+        "sourceUnit": 44162,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 46485,
+              "name": "IController",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 44161,
+              "src": "67:11:92",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 46488,
+        "nodeType": "ImportDirective",
+        "src": "119:78:92",
+        "nodes": [],
+        "absolutePath": "src/SetProtocol/interfaces/IIntegrationRegistry.sol",
+        "file": "../interfaces/IIntegrationRegistry.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 46558,
+        "sourceUnit": 44243,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 46487,
+              "name": "IIntegrationRegistry",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 44242,
+              "src": "128:20:92",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 46490,
+        "nodeType": "ImportDirective",
+        "src": "198:62:92",
+        "nodes": [],
+        "absolutePath": "src/SetProtocol/interfaces/IPriceOracle.sol",
+        "file": "../interfaces/IPriceOracle.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 46558,
+        "sourceUnit": 44323,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 46489,
+              "name": "IPriceOracle",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 44322,
+              "src": "207:12:92",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 46492,
+        "nodeType": "ImportDirective",
+        "src": "261:58:92",
+        "nodes": [],
+        "absolutePath": "src/SetProtocol/interfaces/ISetValuer.sol",
+        "file": "../interfaces/ISetValuer.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 46558,
+        "sourceUnit": 44593,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 46491,
+              "name": "ISetValuer",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 44592,
+              "src": "270:10:92",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 46557,
+        "nodeType": "ContractDefinition",
+        "src": "487:1431:92",
+        "nodes": [
+          {
+            "id": 46496,
+            "nodeType": "VariableDeclaration",
+            "src": "591:62:92",
+            "nodes": [],
+            "constant": true,
+            "mutability": "constant",
+            "name": "INTEGRATION_REGISTRY_RESOURCE_ID",
+            "nameLocation": "617:32:92",
+            "scope": 46557,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 46494,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "591:7:92",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "30",
+              "id": 46495,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "652:1:92",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 46499,
+            "nodeType": "VariableDeclaration",
+            "src": "721:54:92",
+            "nodes": [],
+            "constant": true,
+            "mutability": "constant",
+            "name": "PRICE_ORACLE_RESOURCE_ID",
+            "nameLocation": "747:24:92",
+            "scope": 46557,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 46497,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "721:7:92",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "31",
+              "id": 46498,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "774:1:92",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 46502,
+            "nodeType": "VariableDeclaration",
+            "src": "850:52:92",
+            "nodes": [],
+            "constant": true,
+            "mutability": "constant",
+            "name": "SET_VALUER_RESOURCE_ID",
+            "nameLocation": "876:22:92",
+            "scope": 46557,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 46500,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "850:7:92",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "32",
+              "id": 46501,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "901:1:92",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_2_by_1",
+                "typeString": "int_const 2"
+              },
+              "value": "2"
+            },
+            "visibility": "internal"
+          },
+          {
+            "id": 46520,
+            "nodeType": "FunctionDefinition",
+            "src": "1114:204:92",
+            "nodes": [],
+            "body": {
+              "id": 46519,
+              "nodeType": "Block",
+              "src": "1216:102:92",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 46515,
+                            "name": "INTEGRATION_REGISTRY_RESOURCE_ID",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 46496,
+                            "src": "1277:32:92",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "id": 46513,
+                            "name": "_controller",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 46506,
+                            "src": "1254:11:92",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IController_$44161",
+                              "typeString": "contract IController"
+                            }
+                          },
+                          "id": 46514,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "1266:10:92",
+                          "memberName": "resourceId",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 44160,
+                          "src": "1254:22:92",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_address_$",
+                            "typeString": "function (uint256) view external returns (address)"
+                          }
+                        },
+                        "id": 46516,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1254:56:92",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 46512,
+                      "name": "IIntegrationRegistry",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 44242,
+                      "src": "1233:20:92",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_IIntegrationRegistry_$44242_$",
+                        "typeString": "type(contract IIntegrationRegistry)"
+                      }
+                    },
+                    "id": 46517,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1233:78:92",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IIntegrationRegistry_$44242",
+                      "typeString": "contract IIntegrationRegistry"
+                    }
+                  },
+                  "functionReturnParameters": 46511,
+                  "id": 46518,
+                  "nodeType": "Return",
+                  "src": "1226:85:92"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 46503,
+              "nodeType": "StructuredDocumentation",
+              "src": "955:154:92",
+              "text": " Gets the instance of integration registry stored on Controller. Note: IntegrationRegistry is stored as index 0 on\n the Controller"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getIntegrationRegistry",
+            "nameLocation": "1123:22:92",
+            "parameters": {
+              "id": 46507,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46506,
+                  "mutability": "mutable",
+                  "name": "_controller",
+                  "nameLocation": "1158:11:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46520,
+                  "src": "1146:23:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IController_$44161",
+                    "typeString": "contract IController"
+                  },
+                  "typeName": {
+                    "id": 46505,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 46504,
+                      "name": "IController",
+                      "nameLocations": [
+                        "1146:11:92"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44161,
+                      "src": "1146:11:92"
+                    },
+                    "referencedDeclaration": 44161,
+                    "src": "1146:11:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IController_$44161",
+                      "typeString": "contract IController"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1145:25:92"
+            },
+            "returnParameters": {
+              "id": 46511,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46510,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46520,
+                  "src": "1194:20:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IIntegrationRegistry_$44242",
+                    "typeString": "contract IIntegrationRegistry"
+                  },
+                  "typeName": {
+                    "id": 46509,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 46508,
+                      "name": "IIntegrationRegistry",
+                      "nameLocations": [
+                        "1194:20:92"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44242,
+                      "src": "1194:20:92"
+                    },
+                    "referencedDeclaration": 44242,
+                    "src": "1194:20:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IIntegrationRegistry_$44242",
+                      "typeString": "contract IIntegrationRegistry"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1193:22:92"
+            },
+            "scope": 46557,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 46538,
+            "nodeType": "FunctionDefinition",
+            "src": "1449:172:92",
+            "nodes": [],
+            "body": {
+              "id": 46537,
+              "nodeType": "Block",
+              "src": "1535:86:92",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 46533,
+                            "name": "PRICE_ORACLE_RESOURCE_ID",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 46499,
+                            "src": "1588:24:92",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "id": 46531,
+                            "name": "_controller",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 46524,
+                            "src": "1565:11:92",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IController_$44161",
+                              "typeString": "contract IController"
+                            }
+                          },
+                          "id": 46532,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "1577:10:92",
+                          "memberName": "resourceId",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 44160,
+                          "src": "1565:22:92",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_address_$",
+                            "typeString": "function (uint256) view external returns (address)"
+                          }
+                        },
+                        "id": 46534,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1565:48:92",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 46530,
+                      "name": "IPriceOracle",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 44322,
+                      "src": "1552:12:92",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_IPriceOracle_$44322_$",
+                        "typeString": "type(contract IPriceOracle)"
+                      }
+                    },
+                    "id": 46535,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1552:62:92",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPriceOracle_$44322",
+                      "typeString": "contract IPriceOracle"
+                    }
+                  },
+                  "functionReturnParameters": 46529,
+                  "id": 46536,
+                  "nodeType": "Return",
+                  "src": "1545:69:92"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 46521,
+              "nodeType": "StructuredDocumentation",
+              "src": "1324:120:92",
+              "text": " Gets instance of price oracle on Controller. Note: PriceOracle is stored as index 1 on the Controller"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPriceOracle",
+            "nameLocation": "1458:14:92",
+            "parameters": {
+              "id": 46525,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46524,
+                  "mutability": "mutable",
+                  "name": "_controller",
+                  "nameLocation": "1485:11:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46538,
+                  "src": "1473:23:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IController_$44161",
+                    "typeString": "contract IController"
+                  },
+                  "typeName": {
+                    "id": 46523,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 46522,
+                      "name": "IController",
+                      "nameLocations": [
+                        "1473:11:92"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44161,
+                      "src": "1473:11:92"
+                    },
+                    "referencedDeclaration": 44161,
+                    "src": "1473:11:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IController_$44161",
+                      "typeString": "contract IController"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1472:25:92"
+            },
+            "returnParameters": {
+              "id": 46529,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46528,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46538,
+                  "src": "1521:12:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IPriceOracle_$44322",
+                    "typeString": "contract IPriceOracle"
+                  },
+                  "typeName": {
+                    "id": 46527,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 46526,
+                      "name": "IPriceOracle",
+                      "nameLocations": [
+                        "1521:12:92"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44322,
+                      "src": "1521:12:92"
+                    },
+                    "referencedDeclaration": 44322,
+                    "src": "1521:12:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IPriceOracle_$44322",
+                      "typeString": "contract IPriceOracle"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1520:14:92"
+            },
+            "scope": 46557,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 46556,
+            "nodeType": "FunctionDefinition",
+            "src": "1752:164:92",
+            "nodes": [],
+            "body": {
+              "id": 46555,
+              "nodeType": "Block",
+              "src": "1834:82:92",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "arguments": [
+                          {
+                            "id": 46551,
+                            "name": "SET_VALUER_RESOURCE_ID",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 46502,
+                            "src": "1885:22:92",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "expression": {
+                            "id": 46549,
+                            "name": "_controller",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 46542,
+                            "src": "1862:11:92",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_IController_$44161",
+                              "typeString": "contract IController"
+                            }
+                          },
+                          "id": 46550,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberLocation": "1874:10:92",
+                          "memberName": "resourceId",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": 44160,
+                          "src": "1862:22:92",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_external_view$_t_uint256_$returns$_t_address_$",
+                            "typeString": "function (uint256) view external returns (address)"
+                          }
+                        },
+                        "id": 46552,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1862:46:92",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 46548,
+                      "name": "ISetValuer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 44592,
+                      "src": "1851:10:92",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_contract$_ISetValuer_$44592_$",
+                        "typeString": "type(contract ISetValuer)"
+                      }
+                    },
+                    "id": 46553,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1851:58:92",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetValuer_$44592",
+                      "typeString": "contract ISetValuer"
+                    }
+                  },
+                  "functionReturnParameters": 46547,
+                  "id": 46554,
+                  "nodeType": "Return",
+                  "src": "1844:65:92"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 46539,
+              "nodeType": "StructuredDocumentation",
+              "src": "1627:120:92",
+              "text": " Gets the instance of Set valuer on Controller. Note: SetValuer is stored as index 2 on the Controller"
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getSetValuer",
+            "nameLocation": "1761:12:92",
+            "parameters": {
+              "id": 46543,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46542,
+                  "mutability": "mutable",
+                  "name": "_controller",
+                  "nameLocation": "1786:11:92",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46556,
+                  "src": "1774:23:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IController_$44161",
+                    "typeString": "contract IController"
+                  },
+                  "typeName": {
+                    "id": 46541,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 46540,
+                      "name": "IController",
+                      "nameLocations": [
+                        "1774:11:92"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44161,
+                      "src": "1774:11:92"
+                    },
+                    "referencedDeclaration": 44161,
+                    "src": "1774:11:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IController_$44161",
+                      "typeString": "contract IController"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1773:25:92"
+            },
+            "returnParameters": {
+              "id": 46547,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46546,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46556,
+                  "src": "1822:10:92",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetValuer_$44592",
+                    "typeString": "contract ISetValuer"
+                  },
+                  "typeName": {
+                    "id": 46545,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 46544,
+                      "name": "ISetValuer",
+                      "nameLocations": [
+                        "1822:10:92"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44592,
+                      "src": "1822:10:92"
+                    },
+                    "referencedDeclaration": 44592,
+                    "src": "1822:10:92",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetValuer_$44592",
+                      "typeString": "contract ISetValuer"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1821:12:92"
+            },
+            "scope": 46557,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ResourceIdentifier",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 46493,
+          "nodeType": "StructuredDocumentation",
+          "src": "321:165:92",
+          "text": " @title ResourceIdentifier\n @author Set Protocol\n A collection of utility functions to fetch information related to Resource contracts in the system"
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          46557
+        ],
+        "name": "ResourceIdentifier",
+        "nameLocation": "495:18:92",
+        "scope": 46558,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 92
+}

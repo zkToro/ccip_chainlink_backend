@@ -1,0 +1,341 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract ISetToken",
+          "name": "_setToken",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_quoteAsset",
+          "type": "address"
+        }
+      ],
+      "name": "calculateSetTokenValuation",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "calculateSetTokenValuation(address,address)": "6101c540"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ISetToken\",\"name\":\"_setToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_quoteAsset\",\"type\":\"address\"}],\"name\":\"calculateSetTokenValuation\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/SetProtocol/interfaces/ISetValuer.sol\":\"ISetValuer\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x00c839ff53d07d19db2e7cfa1e5133f9ee90a8d64b0e2e57f50446a2d1a3a0e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3dac621d015a68a5251b1e5d41dda0faf252699bf6e8bcf46a958b29964d9dd1\",\"dweb:/ipfs/QmP9axjgZv4cezAhALoTemM62sdLtMDJ9MGTxECnNwHgSJ\"]},\"src/SetProtocol/interfaces/ISetToken.sol\":{\"keccak256\":\"0x0590cde332fffa13eb93bcbad5c700cb7093ae340dea11658a0f2e52c24c0d2a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://95f08bd5da168a54f726c8a87f3c2686712fa61cc0abee7d8673952a293fe66f\",\"dweb:/ipfs/QmcZvbEgsidq5T2ASN35rE2ogj3TcLLGfdeyrb4dbWEDJd\"]},\"src/SetProtocol/interfaces/ISetValuer.sol\":{\"keccak256\":\"0x1afa9de9adf826a9c6fd6ba94235a4ed254fbce71b6a4ec9503809153ead88cc\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4ab840939b47f5cec07899239073b9d9b9d87a788ee05c51bb5ae6abc345e69f\",\"dweb:/ipfs/QmcXUGv9nZ7BcbpxdYgGH7veCDYvBAYdrLVvXYUzxSj8Du\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "contract ISetToken",
+              "name": "_setToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_quoteAsset",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "calculateSetTokenValuation",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/",
+        "@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/",
+        "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+        "@eth-optimism/=node_modules/@eth-optimism/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/",
+        "chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/SetProtocol/interfaces/ISetValuer.sol": "ISetValuer"
+      },
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x00c839ff53d07d19db2e7cfa1e5133f9ee90a8d64b0e2e57f50446a2d1a3a0e0",
+        "urls": [
+          "bzz-raw://3dac621d015a68a5251b1e5d41dda0faf252699bf6e8bcf46a958b29964d9dd1",
+          "dweb:/ipfs/QmP9axjgZv4cezAhALoTemM62sdLtMDJ9MGTxECnNwHgSJ"
+        ],
+        "license": "MIT"
+      },
+      "src/SetProtocol/interfaces/ISetToken.sol": {
+        "keccak256": "0x0590cde332fffa13eb93bcbad5c700cb7093ae340dea11658a0f2e52c24c0d2a",
+        "urls": [
+          "bzz-raw://95f08bd5da168a54f726c8a87f3c2686712fa61cc0abee7d8673952a293fe66f",
+          "dweb:/ipfs/QmcZvbEgsidq5T2ASN35rE2ogj3TcLLGfdeyrb4dbWEDJd"
+        ],
+        "license": "MIT"
+      },
+      "src/SetProtocol/interfaces/ISetValuer.sol": {
+        "keccak256": "0x1afa9de9adf826a9c6fd6ba94235a4ed254fbce71b6a4ec9503809153ead88cc",
+        "urls": [
+          "bzz-raw://4ab840939b47f5cec07899239073b9d9b9d87a788ee05c51bb5ae6abc345e69f",
+          "dweb:/ipfs/QmcXUGv9nZ7BcbpxdYgGH7veCDYvBAYdrLVvXYUzxSj8Du"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/SetProtocol/interfaces/ISetValuer.sol",
+    "id": 44593,
+    "exportedSymbols": {
+      "ISetToken": [
+        44577
+      ],
+      "ISetValuer": [
+        44592
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:222:84",
+    "nodes": [
+      {
+        "id": 44579,
+        "nodeType": "PragmaDirective",
+        "src": "33:23:84",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 44581,
+        "nodeType": "ImportDirective",
+        "src": "58:56:84",
+        "nodes": [],
+        "absolutePath": "src/SetProtocol/interfaces/ISetToken.sol",
+        "file": "../interfaces/ISetToken.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 44593,
+        "sourceUnit": 44578,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 44580,
+              "name": "ISetToken",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 44577,
+              "src": "67:9:84",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 44592,
+        "nodeType": "ContractDefinition",
+        "src": "116:139:84",
+        "nodes": [
+          {
+            "id": 44591,
+            "nodeType": "FunctionDefinition",
+            "src": "143:110:84",
+            "nodes": [],
+            "functionSelector": "6101c540",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculateSetTokenValuation",
+            "nameLocation": "152:26:84",
+            "parameters": {
+              "id": 44587,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44584,
+                  "mutability": "mutable",
+                  "name": "_setToken",
+                  "nameLocation": "189:9:84",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44591,
+                  "src": "179:19:84",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetToken_$44577",
+                    "typeString": "contract ISetToken"
+                  },
+                  "typeName": {
+                    "id": 44583,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 44582,
+                      "name": "ISetToken",
+                      "nameLocations": [
+                        "179:9:84"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44577,
+                      "src": "179:9:84"
+                    },
+                    "referencedDeclaration": 44577,
+                    "src": "179:9:84",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetToken_$44577",
+                      "typeString": "contract ISetToken"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44586,
+                  "mutability": "mutable",
+                  "name": "_quoteAsset",
+                  "nameLocation": "208:11:84",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44591,
+                  "src": "200:19:84",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44585,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "200:7:84",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "178:42:84"
+            },
+            "returnParameters": {
+              "id": 44590,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44589,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44591,
+                  "src": "244:7:84",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44588,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "244:7:84",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "243:9:84"
+            },
+            "scope": 44592,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISetValuer",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          44592
+        ],
+        "name": "ISetValuer",
+        "nameLocation": "126:10:84",
+        "scope": 44593,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 84
+}

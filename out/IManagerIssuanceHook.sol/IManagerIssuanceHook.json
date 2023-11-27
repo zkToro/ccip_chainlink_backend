@@ -1,0 +1,580 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract ISetToken",
+          "name": "_setToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_issueQuantity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "invokePreIssueHook",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract ISetToken",
+          "name": "_setToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_redeemQuantity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_sender",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "invokePreRedeemHook",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "invokePreIssueHook(address,uint256,address,address)": "a0458083",
+    "invokePreRedeemHook(address,uint256,address,address)": "9b19c2bf"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ISetToken\",\"name\":\"_setToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_issueQuantity\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"invokePreIssueHook\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract ISetToken\",\"name\":\"_setToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_redeemQuantity\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_sender\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"}],\"name\":\"invokePreRedeemHook\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/SetProtocol/interfaces/IManagerIssuanceHook.sol\":\"IManagerIssuanceHook\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x00c839ff53d07d19db2e7cfa1e5133f9ee90a8d64b0e2e57f50446a2d1a3a0e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3dac621d015a68a5251b1e5d41dda0faf252699bf6e8bcf46a958b29964d9dd1\",\"dweb:/ipfs/QmP9axjgZv4cezAhALoTemM62sdLtMDJ9MGTxECnNwHgSJ\"]},\"src/SetProtocol/interfaces/IManagerIssuanceHook.sol\":{\"keccak256\":\"0x4f708eb3b9d68eaf0f2b467b8e8f19787931080f423e4f3b37fec992e06d5f7e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f01948d18d0bbfebfec2e744b1a5d190dd77b34ade1da85e8ce54730d70e55c3\",\"dweb:/ipfs/Qmbk4A6mpcSbHV1r1qFJgdJ5sg2pSB6pEMVNS8mBobzHqG\"]},\"src/SetProtocol/interfaces/ISetToken.sol\":{\"keccak256\":\"0x0590cde332fffa13eb93bcbad5c700cb7093ae340dea11658a0f2e52c24c0d2a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://95f08bd5da168a54f726c8a87f3c2686712fa61cc0abee7d8673952a293fe66f\",\"dweb:/ipfs/QmcZvbEgsidq5T2ASN35rE2ogj3TcLLGfdeyrb4dbWEDJd\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "contract ISetToken",
+              "name": "_setToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_issueQuantity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "_sender",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "invokePreIssueHook"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract ISetToken",
+              "name": "_setToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_redeemQuantity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address",
+              "name": "_sender",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "invokePreRedeemHook"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/",
+        "@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/",
+        "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+        "@eth-optimism/=node_modules/@eth-optimism/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/",
+        "chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/SetProtocol/interfaces/IManagerIssuanceHook.sol": "IManagerIssuanceHook"
+      },
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x00c839ff53d07d19db2e7cfa1e5133f9ee90a8d64b0e2e57f50446a2d1a3a0e0",
+        "urls": [
+          "bzz-raw://3dac621d015a68a5251b1e5d41dda0faf252699bf6e8bcf46a958b29964d9dd1",
+          "dweb:/ipfs/QmP9axjgZv4cezAhALoTemM62sdLtMDJ9MGTxECnNwHgSJ"
+        ],
+        "license": "MIT"
+      },
+      "src/SetProtocol/interfaces/IManagerIssuanceHook.sol": {
+        "keccak256": "0x4f708eb3b9d68eaf0f2b467b8e8f19787931080f423e4f3b37fec992e06d5f7e",
+        "urls": [
+          "bzz-raw://f01948d18d0bbfebfec2e744b1a5d190dd77b34ade1da85e8ce54730d70e55c3",
+          "dweb:/ipfs/Qmbk4A6mpcSbHV1r1qFJgdJ5sg2pSB6pEMVNS8mBobzHqG"
+        ],
+        "license": "MIT"
+      },
+      "src/SetProtocol/interfaces/ISetToken.sol": {
+        "keccak256": "0x0590cde332fffa13eb93bcbad5c700cb7093ae340dea11658a0f2e52c24c0d2a",
+        "urls": [
+          "bzz-raw://95f08bd5da168a54f726c8a87f3c2686712fa61cc0abee7d8673952a293fe66f",
+          "dweb:/ipfs/QmcZvbEgsidq5T2ASN35rE2ogj3TcLLGfdeyrb4dbWEDJd"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/SetProtocol/interfaces/IManagerIssuanceHook.sol",
+    "id": 44297,
+    "exportedSymbols": {
+      "IManagerIssuanceHook": [
+        44296
+      ],
+      "ISetToken": [
+        44577
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:341:80",
+    "nodes": [
+      {
+        "id": 44269,
+        "nodeType": "PragmaDirective",
+        "src": "33:23:80",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 44271,
+        "nodeType": "ImportDirective",
+        "src": "58:44:80",
+        "nodes": [],
+        "absolutePath": "src/SetProtocol/interfaces/ISetToken.sol",
+        "file": "./ISetToken.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 44297,
+        "sourceUnit": 44578,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 44270,
+              "name": "ISetToken",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 44577,
+              "src": "67:9:80",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 44296,
+        "nodeType": "ContractDefinition",
+        "src": "104:270:80",
+        "nodes": [
+          {
+            "id": 44283,
+            "nodeType": "FunctionDefinition",
+            "src": "141:112:80",
+            "nodes": [],
+            "functionSelector": "a0458083",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "invokePreIssueHook",
+            "nameLocation": "150:18:80",
+            "parameters": {
+              "id": 44281,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44274,
+                  "mutability": "mutable",
+                  "name": "_setToken",
+                  "nameLocation": "179:9:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44283,
+                  "src": "169:19:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetToken_$44577",
+                    "typeString": "contract ISetToken"
+                  },
+                  "typeName": {
+                    "id": 44273,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 44272,
+                      "name": "ISetToken",
+                      "nameLocations": [
+                        "169:9:80"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44577,
+                      "src": "169:9:80"
+                    },
+                    "referencedDeclaration": 44577,
+                    "src": "169:9:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetToken_$44577",
+                      "typeString": "contract ISetToken"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44276,
+                  "mutability": "mutable",
+                  "name": "_issueQuantity",
+                  "nameLocation": "198:14:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44283,
+                  "src": "190:22:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44275,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "190:7:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44278,
+                  "mutability": "mutable",
+                  "name": "_sender",
+                  "nameLocation": "222:7:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44283,
+                  "src": "214:15:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44277,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "214:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44280,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "239:3:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44283,
+                  "src": "231:11:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44279,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "231:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "168:75:80"
+            },
+            "returnParameters": {
+              "id": 44282,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "252:0:80"
+            },
+            "scope": 44296,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 44295,
+            "nodeType": "FunctionDefinition",
+            "src": "258:114:80",
+            "nodes": [],
+            "functionSelector": "9b19c2bf",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "invokePreRedeemHook",
+            "nameLocation": "267:19:80",
+            "parameters": {
+              "id": 44293,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44286,
+                  "mutability": "mutable",
+                  "name": "_setToken",
+                  "nameLocation": "297:9:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44295,
+                  "src": "287:19:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetToken_$44577",
+                    "typeString": "contract ISetToken"
+                  },
+                  "typeName": {
+                    "id": 44285,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 44284,
+                      "name": "ISetToken",
+                      "nameLocations": [
+                        "287:9:80"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44577,
+                      "src": "287:9:80"
+                    },
+                    "referencedDeclaration": 44577,
+                    "src": "287:9:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetToken_$44577",
+                      "typeString": "contract ISetToken"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44288,
+                  "mutability": "mutable",
+                  "name": "_redeemQuantity",
+                  "nameLocation": "316:15:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44295,
+                  "src": "308:23:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44287,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "308:7:80",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44290,
+                  "mutability": "mutable",
+                  "name": "_sender",
+                  "nameLocation": "341:7:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44295,
+                  "src": "333:15:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44289,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "333:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44292,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "358:3:80",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44295,
+                  "src": "350:11:80",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44291,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "350:7:80",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "286:76:80"
+            },
+            "returnParameters": {
+              "id": 44294,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "371:0:80"
+            },
+            "scope": 44296,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IManagerIssuanceHook",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          44296
+        ],
+        "name": "IManagerIssuanceHook",
+        "nameLocation": "114:20:80",
+        "scope": 44297,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 80
+}

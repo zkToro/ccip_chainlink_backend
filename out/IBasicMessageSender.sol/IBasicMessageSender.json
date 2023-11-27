@@ -1,0 +1,361 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint64",
+          "name": "destinationChainSelector",
+          "type": "uint64"
+        },
+        {
+          "internalType": "address",
+          "name": "receiver",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "messageText",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "useLink",
+          "type": "bool"
+        }
+      ],
+      "name": "send",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "messageId",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "send(uint64,address,string,bool)": "95f58fb2"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint64\",\"name\":\"destinationChainSelector\",\"type\":\"uint64\"},{\"internalType\":\"address\",\"name\":\"receiver\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"messageText\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"useLink\",\"type\":\"bool\"}],\"name\":\"send\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"messageId\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/IBasicMessageSender.sol\":\"IBasicMessageSender\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"src/IBasicMessageSender.sol\":{\"keccak256\":\"0x5275313e5577c2b93050ff16a88be7c39749ef43f0b645fcc96354a0ff415b02\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0369d278daf248b2ea874f11f46fd33077343245355b6c4c720718fc5a1e4108\",\"dweb:/ipfs/QmNiTJHFrCaWbx9sx6sQ3iTqgC4GGhpTgkNYRipdP4StX1\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint64",
+              "name": "destinationChainSelector",
+              "type": "uint64"
+            },
+            {
+              "internalType": "address",
+              "name": "receiver",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "messageText",
+              "type": "string"
+            },
+            {
+              "internalType": "bool",
+              "name": "useLink",
+              "type": "bool"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "send",
+          "outputs": [
+            {
+              "internalType": "bytes32",
+              "name": "messageId",
+              "type": "bytes32"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/",
+        "@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/",
+        "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+        "@eth-optimism/=node_modules/@eth-optimism/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/",
+        "chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/IBasicMessageSender.sol": "IBasicMessageSender"
+      },
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "src/IBasicMessageSender.sol": {
+        "keccak256": "0x5275313e5577c2b93050ff16a88be7c39749ef43f0b645fcc96354a0ff415b02",
+        "urls": [
+          "bzz-raw://0369d278daf248b2ea874f11f46fd33077343245355b6c4c720718fc5a1e4108",
+          "dweb:/ipfs/QmNiTJHFrCaWbx9sx6sQ3iTqgC4GGhpTgkNYRipdP4StX1"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/IBasicMessageSender.sol",
+    "id": 38927,
+    "exportedSymbols": {
+      "IBasicMessageSender": [
+        38926
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:403:65",
+    "nodes": [
+      {
+        "id": 38912,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:65",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 38926,
+        "nodeType": "ContractDefinition",
+        "src": "132:300:65",
+        "nodes": [
+          {
+            "id": 38925,
+            "nodeType": "FunctionDefinition",
+            "src": "169:182:65",
+            "nodes": [],
+            "functionSelector": "95f58fb2",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "send",
+            "nameLocation": "178:4:65",
+            "parameters": {
+              "id": 38921,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38914,
+                  "mutability": "mutable",
+                  "name": "destinationChainSelector",
+                  "nameLocation": "199:24:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38925,
+                  "src": "192:31:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint64",
+                    "typeString": "uint64"
+                  },
+                  "typeName": {
+                    "id": 38913,
+                    "name": "uint64",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "192:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint64",
+                      "typeString": "uint64"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38916,
+                  "mutability": "mutable",
+                  "name": "receiver",
+                  "nameLocation": "241:8:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38925,
+                  "src": "233:16:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 38915,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "233:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38918,
+                  "mutability": "mutable",
+                  "name": "messageText",
+                  "nameLocation": "273:11:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38925,
+                  "src": "259:25:65",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 38917,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "259:6:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 38920,
+                  "mutability": "mutable",
+                  "name": "useLink",
+                  "nameLocation": "299:7:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38925,
+                  "src": "294:12:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 38919,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "294:4:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "182:130:65"
+            },
+            "returnParameters": {
+              "id": 38924,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38923,
+                  "mutability": "mutable",
+                  "name": "messageId",
+                  "nameLocation": "340:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 38925,
+                  "src": "332:17:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 38922,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "332:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "331:19:65"
+            },
+            "scope": 38926,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IBasicMessageSender",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          38926
+        ],
+        "name": "IBasicMessageSender",
+        "nameLocation": "142:19:65",
+        "scope": 38927,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 65
+}

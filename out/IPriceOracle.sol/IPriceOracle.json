@@ -1,0 +1,377 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_assetOne",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_assetTwo",
+          "type": "address"
+        }
+      ],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "masterQuoteAsset",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "getPrice(address,address)": "ac41865a",
+    "masterQuoteAsset()": "34283354"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_assetOne\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_assetTwo\",\"type\":\"address\"}],\"name\":\"getPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"masterQuoteAsset\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Set Protocol Interface for interacting with PriceOracle\",\"kind\":\"dev\",\"methods\":{},\"title\":\"IPriceOracle\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/SetProtocol/interfaces/IPriceOracle.sol\":\"IPriceOracle\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"src/SetProtocol/interfaces/IPriceOracle.sol\":{\"keccak256\":\"0xa58e9aefa1cba7b995acb3819153ab7e0f93df6f0513d0ad4a0eee56bb6bde87\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://1c0c273143e97984adb18c0da344ed730766e179d6ebdfa081a86ba925c9ad29\",\"dweb:/ipfs/QmenEmRotMUm3Xh1D65F3WkhHMrwzPDciGYiieNhdbDiYb\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_assetOne",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_assetTwo",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getPrice",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "masterQuoteAsset",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/",
+        "@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/",
+        "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+        "@eth-optimism/=node_modules/@eth-optimism/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/",
+        "chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/SetProtocol/interfaces/IPriceOracle.sol": "IPriceOracle"
+      },
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "src/SetProtocol/interfaces/IPriceOracle.sol": {
+        "keccak256": "0xa58e9aefa1cba7b995acb3819153ab7e0f93df6f0513d0ad4a0eee56bb6bde87",
+        "urls": [
+          "bzz-raw://1c0c273143e97984adb18c0da344ed730766e179d6ebdfa081a86ba925c9ad29",
+          "dweb:/ipfs/QmenEmRotMUm3Xh1D65F3WkhHMrwzPDciGYiieNhdbDiYb"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/SetProtocol/interfaces/IPriceOracle.sol",
+    "id": 44323,
+    "exportedSymbols": {
+      "IPriceOracle": [
+        44322
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:361:82",
+    "nodes": [
+      {
+        "id": 44306,
+        "nodeType": "PragmaDirective",
+        "src": "33:23:82",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 44322,
+        "nodeType": "ContractDefinition",
+        "src": "162:232:82",
+        "nodes": [
+          {
+            "id": 44316,
+            "nodeType": "FunctionDefinition",
+            "src": "239:88:82",
+            "nodes": [],
+            "functionSelector": "ac41865a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrice",
+            "nameLocation": "248:8:82",
+            "parameters": {
+              "id": 44312,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44309,
+                  "mutability": "mutable",
+                  "name": "_assetOne",
+                  "nameLocation": "265:9:82",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44316,
+                  "src": "257:17:82",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44308,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "257:7:82",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44311,
+                  "mutability": "mutable",
+                  "name": "_assetTwo",
+                  "nameLocation": "284:9:82",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44316,
+                  "src": "276:17:82",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44310,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "276:7:82",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "256:38:82"
+            },
+            "returnParameters": {
+              "id": 44315,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44314,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44316,
+                  "src": "318:7:82",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44313,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "318:7:82",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "317:9:82"
+            },
+            "scope": 44322,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 44321,
+            "nodeType": "FunctionDefinition",
+            "src": "332:60:82",
+            "nodes": [],
+            "functionSelector": "34283354",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "masterQuoteAsset",
+            "nameLocation": "341:16:82",
+            "parameters": {
+              "id": 44317,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "357:2:82"
+            },
+            "returnParameters": {
+              "id": 44320,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44319,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44321,
+                  "src": "383:7:82",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44318,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "383:7:82",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "382:9:82"
+            },
+            "scope": 44322,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPriceOracle",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 44307,
+          "nodeType": "StructuredDocumentation",
+          "src": "58:103:82",
+          "text": " @title IPriceOracle\n @author Set Protocol\n Interface for interacting with PriceOracle"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          44322
+        ],
+        "name": "IPriceOracle",
+        "nameLocation": "172:12:82",
+        "scope": 44323,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 82
+}

@@ -1,0 +1,504 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract ISetToken",
+          "name": "_setToken",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_lockToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_lockQuantity",
+          "type": "uint256"
+        }
+      ],
+      "name": "lockToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract ISetToken",
+          "name": "_setToken",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_releaseToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_releaseTQuantity",
+          "type": "uint256"
+        }
+      ],
+      "name": "releaseToken",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "lockToken(address,address,uint256)": "1d4347a8",
+    "releaseToken(address,address,uint256)": "6d098560"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ISetToken\",\"name\":\"_setToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_lockToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_lockQuantity\",\"type\":\"uint256\"}],\"name\":\"lockToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract ISetToken\",\"name\":\"_setToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_releaseToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_releaseTQuantity\",\"type\":\"uint256\"}],\"name\":\"releaseToken\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/SetProtocol/interfaces/ILockReleaseModule.sol\":\"ILockReleaseModule\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x00c839ff53d07d19db2e7cfa1e5133f9ee90a8d64b0e2e57f50446a2d1a3a0e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3dac621d015a68a5251b1e5d41dda0faf252699bf6e8bcf46a958b29964d9dd1\",\"dweb:/ipfs/QmP9axjgZv4cezAhALoTemM62sdLtMDJ9MGTxECnNwHgSJ\"]},\"src/SetProtocol/interfaces/ILockReleaseModule.sol\":{\"keccak256\":\"0x5c54a8f368f238fd2ef16007ca279f4a754b2273bbf678d08ea7e818f91f9142\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://603d434354746088462088c763b9108fcef2a2341d4566906880b2172aca1c29\",\"dweb:/ipfs/QmdgAF1wy1GFA7fb8LgJA5bjBiQPM6CRZg7HoPRMp7DJhg\"]},\"src/SetProtocol/interfaces/ISetToken.sol\":{\"keccak256\":\"0x0590cde332fffa13eb93bcbad5c700cb7093ae340dea11658a0f2e52c24c0d2a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://95f08bd5da168a54f726c8a87f3c2686712fa61cc0abee7d8673952a293fe66f\",\"dweb:/ipfs/QmcZvbEgsidq5T2ASN35rE2ogj3TcLLGfdeyrb4dbWEDJd\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "contract ISetToken",
+              "name": "_setToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_lockToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_lockQuantity",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "lockToken"
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "contract ISetToken",
+              "name": "_setToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_releaseToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_releaseTQuantity",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "releaseToken"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/",
+        "@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/",
+        "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+        "@eth-optimism/=node_modules/@eth-optimism/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/",
+        "chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/SetProtocol/interfaces/ILockReleaseModule.sol": "ILockReleaseModule"
+      },
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+        "keccak256": "0x00c839ff53d07d19db2e7cfa1e5133f9ee90a8d64b0e2e57f50446a2d1a3a0e0",
+        "urls": [
+          "bzz-raw://3dac621d015a68a5251b1e5d41dda0faf252699bf6e8bcf46a958b29964d9dd1",
+          "dweb:/ipfs/QmP9axjgZv4cezAhALoTemM62sdLtMDJ9MGTxECnNwHgSJ"
+        ],
+        "license": "MIT"
+      },
+      "src/SetProtocol/interfaces/ILockReleaseModule.sol": {
+        "keccak256": "0x5c54a8f368f238fd2ef16007ca279f4a754b2273bbf678d08ea7e818f91f9142",
+        "urls": [
+          "bzz-raw://603d434354746088462088c763b9108fcef2a2341d4566906880b2172aca1c29",
+          "dweb:/ipfs/QmdgAF1wy1GFA7fb8LgJA5bjBiQPM6CRZg7HoPRMp7DJhg"
+        ],
+        "license": "MIT"
+      },
+      "src/SetProtocol/interfaces/ISetToken.sol": {
+        "keccak256": "0x0590cde332fffa13eb93bcbad5c700cb7093ae340dea11658a0f2e52c24c0d2a",
+        "urls": [
+          "bzz-raw://95f08bd5da168a54f726c8a87f3c2686712fa61cc0abee7d8673952a293fe66f",
+          "dweb:/ipfs/QmcZvbEgsidq5T2ASN35rE2ogj3TcLLGfdeyrb4dbWEDJd"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/SetProtocol/interfaces/ILockReleaseModule.sol",
+    "id": 44268,
+    "exportedSymbols": {
+      "IERC20": [
+        30233
+      ],
+      "ILockReleaseModule": [
+        44267
+      ],
+      "ISetToken": [
+        44577
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:394:79",
+    "nodes": [
+      {
+        "id": 44244,
+        "nodeType": "PragmaDirective",
+        "src": "33:23:79",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".19"
+        ]
+      },
+      {
+        "id": 44245,
+        "nodeType": "PragmaDirective",
+        "src": "57:35:79",
+        "nodes": [],
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ]
+      },
+      {
+        "id": 44246,
+        "nodeType": "ImportDirective",
+        "src": "94:25:79",
+        "nodes": [],
+        "absolutePath": "src/SetProtocol/interfaces/ISetToken.sol",
+        "file": "./ISetToken.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 44268,
+        "sourceUnit": 44578,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 44267,
+        "nodeType": "ContractDefinition",
+        "src": "121:306:79",
+        "nodes": [
+          {
+            "id": 44256,
+            "nodeType": "FunctionDefinition",
+            "src": "157:123:79",
+            "nodes": [],
+            "functionSelector": "1d4347a8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "lockToken",
+            "nameLocation": "166:9:79",
+            "parameters": {
+              "id": 44254,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44249,
+                  "mutability": "mutable",
+                  "name": "_setToken",
+                  "nameLocation": "195:9:79",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44256,
+                  "src": "185:19:79",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetToken_$44577",
+                    "typeString": "contract ISetToken"
+                  },
+                  "typeName": {
+                    "id": 44248,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 44247,
+                      "name": "ISetToken",
+                      "nameLocations": [
+                        "185:9:79"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44577,
+                      "src": "185:9:79"
+                    },
+                    "referencedDeclaration": 44577,
+                    "src": "185:9:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetToken_$44577",
+                      "typeString": "contract ISetToken"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44251,
+                  "mutability": "mutable",
+                  "name": "_lockToken",
+                  "nameLocation": "222:10:79",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44256,
+                  "src": "214:18:79",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44250,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "214:7:79",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44253,
+                  "mutability": "mutable",
+                  "name": "_lockQuantity",
+                  "nameLocation": "250:13:79",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44256,
+                  "src": "242:21:79",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44252,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "242:7:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "175:94:79"
+            },
+            "returnParameters": {
+              "id": 44255,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "279:0:79"
+            },
+            "scope": 44267,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 44266,
+            "nodeType": "FunctionDefinition",
+            "src": "290:132:79",
+            "nodes": [],
+            "functionSelector": "6d098560",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "releaseToken",
+            "nameLocation": "299:12:79",
+            "parameters": {
+              "id": 44264,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 44259,
+                  "mutability": "mutable",
+                  "name": "_setToken",
+                  "nameLocation": "331:9:79",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44266,
+                  "src": "321:19:79",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetToken_$44577",
+                    "typeString": "contract ISetToken"
+                  },
+                  "typeName": {
+                    "id": 44258,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 44257,
+                      "name": "ISetToken",
+                      "nameLocations": [
+                        "321:9:79"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 44577,
+                      "src": "321:9:79"
+                    },
+                    "referencedDeclaration": 44577,
+                    "src": "321:9:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetToken_$44577",
+                      "typeString": "contract ISetToken"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44261,
+                  "mutability": "mutable",
+                  "name": "_releaseToken",
+                  "nameLocation": "358:13:79",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44266,
+                  "src": "350:21:79",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 44260,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "350:7:79",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44263,
+                  "mutability": "mutable",
+                  "name": "_releaseTQuantity",
+                  "nameLocation": "389:17:79",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 44266,
+                  "src": "381:25:79",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 44262,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "381:7:79",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "311:101:79"
+            },
+            "returnParameters": {
+              "id": 44265,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "421:0:79"
+            },
+            "scope": 44267,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ILockReleaseModule",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          44267
+        ],
+        "name": "ILockReleaseModule",
+        "nameLocation": "131:18:79",
+        "scope": 44268,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 79
+}

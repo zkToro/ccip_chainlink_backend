@@ -1,0 +1,335 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "acceptOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "recipient",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "acceptOwnership()": "79ba5097",
+    "owner()": "8da5cb5b",
+    "transferOwnership(address)": "f2fde38b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"acceptOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"recipient\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"node_modules/@chainlink/contracts-ccip/src/v0.8/interfaces/OwnableInterface.sol\":\"OwnableInterface\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"node_modules/@chainlink/contracts-ccip/src/v0.8/interfaces/OwnableInterface.sol\":{\"keccak256\":\"0xb8b3a97783dddc198b790c4cec1eda7fb47aa38cbaea6555220d0ed8c735c086\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://acf7ed6aff47fbddeff1b85e1225a717dfa8bfb3ab89db0e6564346afcf03693\",\"dweb:/ipfs/QmQQn5sKn1ARbt1WhYoHwfTJhK8fbQi8MbDQeHxGXTPbPE\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.19+commit.7dd6d404"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "acceptOwnership"
+        },
+        {
+          "inputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "owner",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "recipient",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "transferOwnership"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/",
+        "@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/",
+        "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+        "@eth-optimism/=node_modules/@eth-optimism/",
+        "@openzeppelin/=lib/openzeppelin-contracts/",
+        "@uniswap/=node_modules/@uniswap/",
+        "base64-sol/=node_modules/base64-sol/",
+        "chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/",
+        "chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/",
+        "ds-test/=lib/forge-std/lib/ds-test/src/",
+        "erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        "forge-std/=lib/forge-std/src/",
+        "foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/",
+        "openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        "openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "node_modules/@chainlink/contracts-ccip/src/v0.8/interfaces/OwnableInterface.sol": "OwnableInterface"
+      },
+      "libraries": {},
+      "viaIR": true
+    },
+    "sources": {
+      "node_modules/@chainlink/contracts-ccip/src/v0.8/interfaces/OwnableInterface.sol": {
+        "keccak256": "0xb8b3a97783dddc198b790c4cec1eda7fb47aa38cbaea6555220d0ed8c735c086",
+        "urls": [
+          "bzz-raw://acf7ed6aff47fbddeff1b85e1225a717dfa8bfb3ab89db0e6564346afcf03693",
+          "dweb:/ipfs/QmQQn5sKn1ARbt1WhYoHwfTJhK8fbQi8MbDQeHxGXTPbPE"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "node_modules/@chainlink/contracts-ccip/src/v0.8/interfaces/OwnableInterface.sol",
+    "id": 36487,
+    "exportedSymbols": {
+      "OwnableInterface": [
+        36486
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:202:51",
+    "nodes": [
+      {
+        "id": 36472,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:51",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 36486,
+        "nodeType": "ContractDefinition",
+        "src": "57:176:51",
+        "nodes": [
+          {
+            "id": 36477,
+            "nodeType": "FunctionDefinition",
+            "src": "88:44:51",
+            "nodes": [],
+            "functionSelector": "8da5cb5b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "owner",
+            "nameLocation": "97:5:51",
+            "parameters": {
+              "id": 36473,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "102:2:51"
+            },
+            "returnParameters": {
+              "id": 36476,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36475,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36477,
+                  "src": "123:7:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 36474,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "123:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "122:9:51"
+            },
+            "scope": 36486,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36482,
+            "nodeType": "FunctionDefinition",
+            "src": "136:55:51",
+            "nodes": [],
+            "functionSelector": "f2fde38b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferOwnership",
+            "nameLocation": "145:17:51",
+            "parameters": {
+              "id": 36480,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 36479,
+                  "mutability": "mutable",
+                  "name": "recipient",
+                  "nameLocation": "171:9:51",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 36482,
+                  "src": "163:17:51",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 36478,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "163:7:51",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "162:19:51"
+            },
+            "returnParameters": {
+              "id": 36481,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "190:0:51"
+            },
+            "scope": 36486,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 36485,
+            "nodeType": "FunctionDefinition",
+            "src": "195:36:51",
+            "nodes": [],
+            "functionSelector": "79ba5097",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "acceptOwnership",
+            "nameLocation": "204:15:51",
+            "parameters": {
+              "id": 36483,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "219:2:51"
+            },
+            "returnParameters": {
+              "id": 36484,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "230:0:51"
+            },
+            "scope": 36486,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "OwnableInterface",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          36486
+        ],
+        "name": "OwnableInterface",
+        "nameLocation": "67:16:51",
+        "scope": 36487,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 51
+}
