@@ -27,6 +27,13 @@ interface IManager {
         bool useLink
         )  external;
 
+    function createSetToken( address[] memory _components,
+        int256[] memory _units,
+        string memory _name,
+        string memory _symbol)
+        external
+        returns (address);
+
     function encodeCCIPInfo(        
         address _setToken,
         string memory  _exchangeName,

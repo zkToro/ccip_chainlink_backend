@@ -112,20 +112,25 @@ contract DeploySetTokenSender is Script {
         units[0] = int256(1*10**18);
 
 
-        address setToken = creator.create(components, units, modules, msg.sender, name, symbol);
+        Manager manager = _setUpManager(tradeModule,lockReleaseModule,controller,chain);
+
+        
+        address setToken = creator.create(components, units, modules, address(manager), name, symbol);
+        
         
         UniswapV3ExchangeAdapterV2 uniswapAdapter = new UniswapV3ExchangeAdapterV2(swapRouterPolygon);
 
+        integrations.addIntegration(address(tradeModule),"UniswapV3",address(uniswapAdapter));
+        
         _init(tradeModule, integrations, basicIssuanceModule, setToken, uniswapAdapter,lockReleaseModule);
-
-        Manager manager = _setUpManager(tradeModule,lockReleaseModule,controller,chain);
 
         manager.regsiterTokenPair(LinkPOLYGON, LinkOptimism);
         // Investor funding
         // setTokenQuantity / 10**18 * (virtual position = real position) 
-        basicIssuanceModule.issue(ISetToken(setToken), setTokenQuantity, msg.sender);
+        // basicIssuanceModule.issue(ISetToken(setToken), setTokenQuantity, msg.sender);
         // Manager action
-        ISetToken(setToken).setManager(address(manager));
+        
+        // ISetToken(setToken).setManager(address(manager));
         
         manager.addToWhitelist(msg.sender);
         // manager.addToWhitelist(aaAddressPolygon);
@@ -144,6 +149,7 @@ contract DeploySetTokenSender is Script {
         console.log('SetTokenCreator address ',address(creator));
         console.log('Manager address ',address(manager));
         console.log('Controller address ',address(controller));
+        
 
 
         vm.stopBroadcast();
@@ -172,7 +178,7 @@ contract DeploySetTokenSender is Script {
     function _init(TradeModule tradeModule, IntegrationRegistry integrations, BasicIssuanceModule basicIssuanceModule, address setToken, UniswapV3ExchangeAdapterV2 uniswapAdapter, LockReleaseModule lockReleaseModule ) internal {
         
         tradeModule.initialize(ISetToken(setToken));
-        integrations.addIntegration(address(tradeModule),"UniswapV3",address(uniswapAdapter));
+        
         // TODO what is pre-issue hook
         basicIssuanceModule.initialize(ISetToken(setToken), IManagerIssuanceHook(address(0)));
         lockReleaseModule.initialize(ISetToken(setToken));
@@ -242,18 +248,14 @@ contract DeploySetTokenReceiver is Script {
         address[] memory components = new address[](1);
         components[0] = LinkOptimism;
         
-
         int256[] memory units = new int256[](1);
         units[0] = int256(1*10**18);
-
 
         address setToken = creator.create(components, units, modules, msg.sender, name, symbol);
         
         UniswapV3ExchangeAdapterV2 uniswapAdapter = new UniswapV3ExchangeAdapterV2(swapRouterOptimism);
 
         _init(tradeModule, integrations, basicIssuanceModule, setToken,uniswapAdapter,lockReleaseModule);
-        
-        
 
         Manager manager = _setUpManager(tradeModule,lockReleaseModule,controller,chain);
         
@@ -354,7 +356,7 @@ contract DeploySetTokenReceiver is Script {
         basicIssuanceModule.initialize(ISetToken(setToken), IManagerIssuanceHook(address(0)));
         lockReleaseModule.initialize(ISetToken(setToken));        
         
-        IERC20(LinkOptimism).approve(address(basicIssuanceModule), type(uint256).max);
+        
         
     }
 

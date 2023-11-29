@@ -17,5 +17,8 @@ interface ITradeModule {
         bytes memory _data
     ) external;
     
+    function initialize(
+        ISetToken _setToken
+    ) external;
 
 }

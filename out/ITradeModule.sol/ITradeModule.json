@@ -6,6 +6,19 @@
           "internalType": "contract ISetToken",
           "name": "_setToken",
           "type": "address"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract ISetToken",
+          "name": "_setToken",
+          "type": "address"
         },
         {
           "internalType": "string",
@@ -55,9 +68,10 @@
     "linkReferences": {}
   },
   "methodIdentifiers": {
+    "initialize(address)": "c4d66de8",
     "trade(address,string,address,uint256,address,uint256,bytes)": "0a5cb529"
   },
-  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ISetToken\",\"name\":\"_setToken\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_exchangeName\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"_sendToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_sendQuantity\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_receiveToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_minReceiveQuantity\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"trade\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/SetProtocol/interfaces/ITradeModule.sol\":\"ITradeModule\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x00c839ff53d07d19db2e7cfa1e5133f9ee90a8d64b0e2e57f50446a2d1a3a0e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3dac621d015a68a5251b1e5d41dda0faf252699bf6e8bcf46a958b29964d9dd1\",\"dweb:/ipfs/QmP9axjgZv4cezAhALoTemM62sdLtMDJ9MGTxECnNwHgSJ\"]},\"src/SetProtocol/interfaces/ISetToken.sol\":{\"keccak256\":\"0x0590cde332fffa13eb93bcbad5c700cb7093ae340dea11658a0f2e52c24c0d2a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://95f08bd5da168a54f726c8a87f3c2686712fa61cc0abee7d8673952a293fe66f\",\"dweb:/ipfs/QmcZvbEgsidq5T2ASN35rE2ogj3TcLLGfdeyrb4dbWEDJd\"]},\"src/SetProtocol/interfaces/ITradeModule.sol\":{\"keccak256\":\"0x17061f5b7af68c8fc803c89656ae87c4b4c58c2cf9b40a3f728455925f0d0816\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8896e0e991839a5ab092948087f2deb4e11957e225549851a6ca6e91766cb29d\",\"dweb:/ipfs/QmZuhEUb9GUtMDoAPfGPrYhpaCzFycperDqRRPweja9kVc\"]}},\"version\":1}",
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.19+commit.7dd6d404\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract ISetToken\",\"name\":\"_setToken\",\"type\":\"address\"}],\"name\":\"initialize\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"contract ISetToken\",\"name\":\"_setToken\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_exchangeName\",\"type\":\"string\"},{\"internalType\":\"address\",\"name\":\"_sendToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_sendQuantity\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_receiveToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_minReceiveQuantity\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"trade\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/SetProtocol/interfaces/ITradeModule.sol\":\"ITradeModule\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@chainlink-testing/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/ethereum/\",\":@chainlink/contracts-ccip/=node_modules/@chainlink/contracts-ccip/\",\":@chainlink/contracts/=node_modules/@chainlink/contracts/\",\":@eth-optimism/=node_modules/@eth-optimism/\",\":@openzeppelin/=lib/openzeppelin-contracts/\",\":@uniswap/=node_modules/@uniswap/\",\":base64-sol/=node_modules/base64-sol/\",\":chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/\",\":chainlink-testing-framework/=lib/foundry-chainlink-toolkit/lib/chainlink-testing-framework/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"],\"viaIR\":true},\"sources\":{\"lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x00c839ff53d07d19db2e7cfa1e5133f9ee90a8d64b0e2e57f50446a2d1a3a0e0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3dac621d015a68a5251b1e5d41dda0faf252699bf6e8bcf46a958b29964d9dd1\",\"dweb:/ipfs/QmP9axjgZv4cezAhALoTemM62sdLtMDJ9MGTxECnNwHgSJ\"]},\"src/SetProtocol/interfaces/ISetToken.sol\":{\"keccak256\":\"0x0590cde332fffa13eb93bcbad5c700cb7093ae340dea11658a0f2e52c24c0d2a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://95f08bd5da168a54f726c8a87f3c2686712fa61cc0abee7d8673952a293fe66f\",\"dweb:/ipfs/QmcZvbEgsidq5T2ASN35rE2ogj3TcLLGfdeyrb4dbWEDJd\"]},\"src/SetProtocol/interfaces/ITradeModule.sol\":{\"keccak256\":\"0x8bc8a50dd65e21bb37de5e05974b4864b0dded0ecf8f122d3e3cb47353c69fd9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f8624d825cfe334b814cd1a78ac5afc25d532bc00f03a63c98d35964d08d5394\",\"dweb:/ipfs/QmQLHy76FYoW9u6mCEhJaWgYJjrhA8ZkS4JQV5xy3ec6dS\"]}},\"version\":1}",
   "metadata": {
     "compiler": {
       "version": "0.8.19+commit.7dd6d404"
@@ -65,6 +79,18 @@
     "language": "Solidity",
     "output": {
       "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "contract ISetToken",
+              "name": "_setToken",
+              "type": "address"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "initialize"
+        },
         {
           "inputs": [
             {
@@ -168,10 +194,10 @@
         "license": "MIT"
       },
       "src/SetProtocol/interfaces/ITradeModule.sol": {
-        "keccak256": "0x17061f5b7af68c8fc803c89656ae87c4b4c58c2cf9b40a3f728455925f0d0816",
+        "keccak256": "0x8bc8a50dd65e21bb37de5e05974b4864b0dded0ecf8f122d3e3cb47353c69fd9",
         "urls": [
-          "bzz-raw://8896e0e991839a5ab092948087f2deb4e11957e225549851a6ca6e91766cb29d",
-          "dweb:/ipfs/QmZuhEUb9GUtMDoAPfGPrYhpaCzFycperDqRRPweja9kVc"
+          "bzz-raw://f8624d825cfe334b814cd1a78ac5afc25d532bc00f03a63c98d35964d08d5394",
+          "dweb:/ipfs/QmQLHy76FYoW9u6mCEhJaWgYJjrhA8ZkS4JQV5xy3ec6dS"
         ],
         "license": "MIT"
       }
@@ -180,25 +206,25 @@
   },
   "ast": {
     "absolutePath": "src/SetProtocol/interfaces/ITradeModule.sol",
-    "id": 44616,
+    "id": 34870,
     "exportedSymbols": {
       "IERC20": [
-        30233
+        24777
       ],
       "ISetToken": [
-        44577
+        34801
       ],
       "ITradeModule": [
-        44615
+        34869
       ]
     },
     "nodeType": "SourceUnit",
-    "src": "33:377:85",
+    "src": "33:446:58",
     "nodes": [
       {
-        "id": 44594,
+        "id": 34842,
         "nodeType": "PragmaDirective",
-        "src": "33:23:85",
+        "src": "33:23:58",
         "nodes": [],
         "literals": [
           "solidity",
@@ -207,9 +233,9 @@
         ]
       },
       {
-        "id": 44595,
+        "id": 34843,
         "nodeType": "PragmaDirective",
-        "src": "57:35:85",
+        "src": "57:35:58",
         "nodes": [],
         "literals": [
           "experimental",
@@ -217,70 +243,70 @@
         ]
       },
       {
-        "id": 44596,
+        "id": 34844,
         "nodeType": "ImportDirective",
-        "src": "94:25:85",
+        "src": "94:25:58",
         "nodes": [],
         "absolutePath": "src/SetProtocol/interfaces/ISetToken.sol",
         "file": "./ISetToken.sol",
         "nameLocation": "-1:-1:-1",
-        "scope": 44616,
-        "sourceUnit": 44578,
+        "scope": 34870,
+        "sourceUnit": 34802,
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
-        "id": 44615,
+        "id": 34869,
         "nodeType": "ContractDefinition",
-        "src": "121:289:85",
+        "src": "121:358:58",
         "nodes": [
           {
-            "id": 44614,
+            "id": 34862,
             "nodeType": "FunctionDefinition",
-            "src": "151:251:85",
+            "src": "151:251:58",
             "nodes": [],
             "functionSelector": "0a5cb529",
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "trade",
-            "nameLocation": "160:5:85",
+            "nameLocation": "160:5:58",
             "parameters": {
-              "id": 44612,
+              "id": 34860,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 44599,
+                  "id": 34847,
                   "mutability": "mutable",
                   "name": "_setToken",
-                  "nameLocation": "185:9:85",
+                  "nameLocation": "185:9:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 44614,
-                  "src": "175:19:85",
+                  "scope": 34862,
+                  "src": "175:19:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_ISetToken_$44577",
+                    "typeIdentifier": "t_contract$_ISetToken_$34801",
                     "typeString": "contract ISetToken"
                   },
                   "typeName": {
-                    "id": 44598,
+                    "id": 34846,
                     "nodeType": "UserDefinedTypeName",
                     "pathNode": {
-                      "id": 44597,
+                      "id": 34845,
                       "name": "ISetToken",
                       "nameLocations": [
-                        "175:9:85"
+                        "175:9:58"
                       ],
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 44577,
-                      "src": "175:9:85"
+                      "referencedDeclaration": 34801,
+                      "src": "175:9:58"
                     },
-                    "referencedDeclaration": 44577,
-                    "src": "175:9:85",
+                    "referencedDeclaration": 34801,
+                    "src": "175:9:58",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_ISetToken_$44577",
+                      "typeIdentifier": "t_contract$_ISetToken_$34801",
                       "typeString": "contract ISetToken"
                     }
                   },
@@ -288,13 +314,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 44601,
+                  "id": 34849,
                   "mutability": "mutable",
                   "name": "_exchangeName",
-                  "nameLocation": "218:13:85",
+                  "nameLocation": "218:13:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 44614,
-                  "src": "204:27:85",
+                  "scope": 34862,
+                  "src": "204:27:58",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -302,10 +328,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 44600,
+                    "id": 34848,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "204:6:85",
+                    "src": "204:6:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -315,13 +341,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 44603,
+                  "id": 34851,
                   "mutability": "mutable",
                   "name": "_sendToken",
-                  "nameLocation": "249:10:85",
+                  "nameLocation": "249:10:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 44614,
-                  "src": "241:18:85",
+                  "scope": 34862,
+                  "src": "241:18:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -329,10 +355,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 44602,
+                    "id": 34850,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "241:7:85",
+                    "src": "241:7:58",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -343,13 +369,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 44605,
+                  "id": 34853,
                   "mutability": "mutable",
                   "name": "_sendQuantity",
-                  "nameLocation": "277:13:85",
+                  "nameLocation": "277:13:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 44614,
-                  "src": "269:21:85",
+                  "scope": 34862,
+                  "src": "269:21:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -357,10 +383,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 44604,
+                    "id": 34852,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "269:7:85",
+                    "src": "269:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -370,13 +396,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 44607,
+                  "id": 34855,
                   "mutability": "mutable",
                   "name": "_receiveToken",
-                  "nameLocation": "308:13:85",
+                  "nameLocation": "308:13:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 44614,
-                  "src": "300:21:85",
+                  "scope": 34862,
+                  "src": "300:21:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -384,10 +410,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 44606,
+                    "id": 34854,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "300:7:85",
+                    "src": "300:7:58",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -398,13 +424,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 44609,
+                  "id": 34857,
                   "mutability": "mutable",
                   "name": "_minReceiveQuantity",
-                  "nameLocation": "339:19:85",
+                  "nameLocation": "339:19:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 44614,
-                  "src": "331:27:85",
+                  "scope": 34862,
+                  "src": "331:27:58",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -412,10 +438,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 44608,
+                    "id": 34856,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "331:7:85",
+                    "src": "331:7:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -425,13 +451,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 44611,
+                  "id": 34859,
                   "mutability": "mutable",
                   "name": "_data",
-                  "nameLocation": "381:5:85",
+                  "nameLocation": "381:5:58",
                   "nodeType": "VariableDeclaration",
-                  "scope": 44614,
-                  "src": "368:18:85",
+                  "scope": 34862,
+                  "src": "368:18:58",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -439,10 +465,10 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 44610,
+                    "id": 34858,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
-                    "src": "368:5:85",
+                    "src": "368:5:58",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes_storage_ptr",
                       "typeString": "bytes"
@@ -451,15 +477,81 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "165:227:85"
+              "src": "165:227:58"
             },
             "returnParameters": {
-              "id": 44613,
+              "id": 34861,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "401:0:85"
+              "src": "401:0:58"
             },
-            "scope": 44615,
+            "scope": 34869,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 34868,
+            "nodeType": "FunctionDefinition",
+            "src": "412:64:58",
+            "nodes": [],
+            "functionSelector": "c4d66de8",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nameLocation": "421:10:58",
+            "parameters": {
+              "id": 34866,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 34865,
+                  "mutability": "mutable",
+                  "name": "_setToken",
+                  "nameLocation": "451:9:58",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 34868,
+                  "src": "441:19:58",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_ISetToken_$34801",
+                    "typeString": "contract ISetToken"
+                  },
+                  "typeName": {
+                    "id": 34864,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 34863,
+                      "name": "ISetToken",
+                      "nameLocations": [
+                        "441:9:58"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 34801,
+                      "src": "441:9:58"
+                    },
+                    "referencedDeclaration": 34801,
+                    "src": "441:9:58",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ISetToken_$34801",
+                      "typeString": "contract ISetToken"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "431:35:58"
+            },
+            "returnParameters": {
+              "id": 34867,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "475:0:58"
+            },
+            "scope": 34869,
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
@@ -472,15 +564,15 @@
         "contractKind": "interface",
         "fullyImplemented": false,
         "linearizedBaseContracts": [
-          44615
+          34869
         ],
         "name": "ITradeModule",
-        "nameLocation": "131:12:85",
-        "scope": 44616,
+        "nameLocation": "131:12:58",
+        "scope": 34870,
         "usedErrors": []
       }
     ],
     "license": "MIT"
   },
-  "id": 85
+  "id": 58
 }

@@ -124,7 +124,7 @@ contract BasicIssuanceModule is ModuleBase, ReentrancyGuard {
     {
         require(_quantity > 0, "Redeem quantity must be > 0");
 
-        // Burn the SetToken - ERC20's internal burn already checks that the user has enough balance
+        // Burn the SetToken -re ERC20's internal burn already checks that the user has enough balance
         _setToken.burn(msg.sender, _quantity);
 
         // For each position, invoke the SetToken to transfer the tokens to the user

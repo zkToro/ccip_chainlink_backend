@@ -18,6 +18,10 @@ interface ILockReleaseModule {
         address _releaseToken,
         uint256 _releaseTQuantity
     ) external; 
-
+    
+    function initialize(
+        ISetToken _setToken
+    )
+        external;
 
 }

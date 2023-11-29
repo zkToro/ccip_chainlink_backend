@@ -58,7 +58,7 @@ contract CCIPTest is Script {
 
         IManager manager = IManager(address(0x3805DE5A9194D757D6Cd44A4fbD463FD1B24Eb86));
 
-
+        
 
         // manager.addToWhitelist(0x8fb67Db825f701d98Ac50327623fccf221c01F15);
         
@@ -83,7 +83,7 @@ contract CCIPTest is Script {
         console.logBytes(ccipInfoBytes);
         // IERC20(LinkPOLYGON).transfer(address(manager), 2*10**18 );
         manager.lockAndSend( setTokenPolygon, LinkPOLYGON, _destQuantity, OptimismChainSelector, receiver, ccipInfoBytes, true );
-           
+
         vm.stopBroadcast();
     }
 }

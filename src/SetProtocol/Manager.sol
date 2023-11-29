@@ -5,10 +5,12 @@ pragma experimental "ABIEncoderV2";
 
 import "./interfaces/ITradeModule.sol";
 import "./interfaces/ILockReleaseModule.sol";
-import "./interfaces/ILockReleaseModule.sol";
+import "./interfaces/IBasicIssuanceModule.sol";
+import "./interfaces/IManagerIssuanceHook.sol";
 import "./interfaces/IController.sol";
 import "./interfaces/IIntegrationRegistry.sol";
 import "./interfaces/IExchangeAdapter.sol";
+import "./interfaces/ISetTokenCreator.sol";
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import {CCIPReceiver} from "@chainlink/contracts-ccip/src/v0.8/ccip/applications/CCIPReceiver.sol";
@@ -28,6 +30,9 @@ contract Manager is Ownable, CCIPReceiver {
     ITradeModule tradeModule;
     ILockReleaseModule lockReleaseModule;
     IController  controller;
+    ISetTokenCreator creator;
+    IBasicIssuanceModule basicIssuanceModule;
+
     address immutable linkToken;
 
     mapping(address => bool) private whitelist;
@@ -64,11 +69,16 @@ contract Manager is Ownable, CCIPReceiver {
         return whitelist[_address];
     }
 
-    constructor(address _tradeModule, address _lockReleaseModule, address _controller , address _ccipRouter, address _linkToken) CCIPReceiver(_ccipRouter) {
+    constructor(address _tradeModule, address _lockReleaseModule, address _controller , 
+                address _creator, address _issuanceModule,
+              address _ccipRouter, address _linkToken) CCIPReceiver(_ccipRouter) {
         tradeModule = ITradeModule(_tradeModule);
         lockReleaseModule = ILockReleaseModule(_lockReleaseModule);
         controller = IController(_controller);
         linkToken = _linkToken;
+        creator = ISetTokenCreator(_creator);
+        basicIssuanceModule =  IBasicIssuanceModule(_issuanceModule);
+
         LinkTokenInterface(linkToken).approve(_ccipRouter, type(uint256).max);
     }
 
@@ -89,6 +99,27 @@ contract Manager is Ownable, CCIPReceiver {
 
     function changeManager(address setToken ,address _address) public onlyOwner {
         ISetToken(setToken).setManager(_address);
+    }
+
+    function createSetToken( address[] memory _components,
+        int256[] memory _units,
+        string memory _name,
+        string memory _symbol)
+        public
+        returns (address)
+        {
+
+        address[] memory modules = new address[](3);
+        modules[0] = address(tradeModule);
+        modules[1] = address(basicIssuanceModule);
+        modules[2] = address(lockReleaseModule);
+
+        address setToken = creator.create(_components, _units, modules, address(this),_name, _symbol );
+        tradeModule.initialize(ISetToken(setToken));
+        basicIssuanceModule.initialize(ISetToken(setToken), IManagerIssuanceHook(address(0)));
+        lockReleaseModule.initialize(ISetToken(setToken));        
+
+        return setToken;
     }
 
     function swap(
@@ -226,7 +257,7 @@ contract Manager is Ownable, CCIPReceiver {
     //     lockReleaseModule.releaseToken(ISetToken(_setToken),_releasekToken,_releaseQuantity);
     // }      
 
-    // function releaseToken(
+    // function releaseToken(``
     //     ISetToken _setToken,
     //     address _releaseToken,
     //     uint256 _releaseTQuantity

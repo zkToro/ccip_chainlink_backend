@@ -136,8 +136,6 @@ contract LockReleaseModule is Withdraw, ModuleBase ,ReentrancyGuard, ILockReleas
         nonReentrant
         onlyManagerAndValidSet(_setToken)
     {
-
-
         LockInfo memory lockInfo;
         lockInfo.setToken =_setToken;
         lockInfo.lockToken = _lockToken;
