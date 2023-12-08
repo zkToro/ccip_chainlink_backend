@@ -30,7 +30,7 @@ string constant name = "Zktoro Genesis Vault";
 string  constant symbol = 'TORO1';
 
 uint8 constant decimals_weth = 18;
-uint8 constant decimals_usdc = 6;
+uint8 constant decimals_usdc = 18;
 
 
 // address constant WETH_POLYGON = 0x7ceB23fD6bC0adD59E62ac25578270cFf1b9f619;

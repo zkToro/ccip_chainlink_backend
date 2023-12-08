@@ -7,6 +7,7 @@ import "../src/SetProtocol/Controller.sol";
 import "../src/SetProtocol/interfaces/IController.sol";
 import "../src/SetProtocol/interfaces/ISetToken.sol";
 import "../src/SetProtocol/interfaces/IManagerIssuanceHook.sol";
+import "../src/SetProtocol/interfaces/IManager.sol";
 import "../src/SetProtocol/SetTokenCreator.sol";
 import "../src/SetProtocol/Manager.sol";
 import "../src/SetProtocol/IntegrationRegistry.sol";
@@ -75,7 +76,20 @@ uint64 constant AvalancheChainSelector = 6433500567565415381;
 
 
 
-// forge script script/SetProtocol.s.sol:DeploySetTokenSender --rpc-url $POLYGON_MAINNET_RPC_URL  --chain-id 137  --etherscan-api-key $POLYGON_ETHERSCAN_TOKEN  --private-key $PRIVATE_KEY 
+// forge script script/SetProtocol.s.sol:ManagerWhiteList --rpc-url $POLYGON_MAINNET_RPC_URL  --chain-id 137  --etherscan-api-key $POLYGON_ETHERSCAN_TOKEN  --private-key $PRIVATE_KEY 
+// forge script script/SetProtocol.s.sol:ManagerWhiteList --rpc-url $AVALANCHE_MAINNET_RPC_URL  --chain-id 43114  --private-key $PRIVATE_KEY 
+contract ManagerWhiteList is Script {
+
+    function run() external {
+        vm.startBroadcast();
+        IManager manager = IManager(0x7295CEE2CfDEBa4451dF11e4d42ad4E0Bf476b6A);
+        manager.addToWhitelist(0xc213d1D35cF63331aeFA661A834F24Afe3c41500);
+
+        vm.stopBroadcast();
+    }
+}
+
+// forge script script/SetProtocol.s.sol:DeploySetTokenSender --rpc-url $POLYGON_MUMBAI_RPC_URL  --chain-id 137  --etherscan-api-key $POLYGON_ETHERSCAN_TOKEN  --private-key $PRIVATE_KEY 
 // Sender consideration
 // chain = 0
 
